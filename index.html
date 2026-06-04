@@ -1,0 +1,1365 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iFood - Eleição Geral de Benefícios 2026</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS (Seguro via HTTPS) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons (Seguro via HTTPS) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ifood: {
+                            red: '#EA1D2C',
+                            darkRed: '#C2131F',
+                            dark: '#0F0F12',
+                            grayDark: '#1E1E24',
+                            grayLight: '#F4F4F6',
+                            muted: '#71717A',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Scroll suave */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Barra de scroll personalizada */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0F0F12;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #3F3F46;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #EA1D2C;
+        }
+        /* Efeito visual de vidro e profundidade */
+        .glass-card {
+            background: rgba(30, 30, 36, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .arena-saude { border-color: rgba(34, 197, 94, 0.3); }
+        .arena-suporte { border-color: rgba(59, 130, 246, 0.3); }
+        .arena-ifood { border-color: rgba(234, 29, 44, 0.3); }
+    </style>
+</head>
+<body class="bg-ifood-dark text-white font-sans antialiased overflow-x-hidden">
+
+    <!-- CABEÇALHO DA PLATAFORMA / BARRA DE NAVEGAÇÃO -->
+    <header class="fixed top-0 left-0 w-full z-40 bg-ifood-dark/90 backdrop-blur-md border-b border-white/5 py-4 px-6 md:px-12 flex justify-between items-center">
+        <div class="flex items-center gap-3">
+            <span class="bg-ifood-red text-white font-extrabold px-3 py-1 rounded-md tracking-tighter text-xl font-display">iFood</span>
+            <span class="text-xs tracking-widest text-ifood-muted font-mono uppercase hidden sm:inline">|| Eleição de Benefícios 2026</span>
+        </div>
+        <nav class="hidden lg:flex items-center gap-6 text-sm font-semibold text-white/75">
+            <a href="#parceiros" class="hover:text-ifood-red transition-colors">Novos Parceiros</a>
+            <a href="#melhorias" class="hover:text-ifood-red transition-colors">Melhorias & IA</a>
+            <a href="#consolidacao" class="hover:text-ifood-red transition-colors">Consolidação</a>
+            <a href="#feira" class="hover:text-ifood-red transition-colors">Feira de Arenas</a>
+            <a href="#governanca" class="hover:text-ifood-red transition-colors">Governança</a>
+            <a href="#apoio" class="hover:text-ifood-red transition-colors">Apoios</a>
+            <a href="#cronograma" class="hover:text-ifood-red transition-colors">Cronograma</a>
+        </nav>
+        <div>
+            <a href="#apoio" class="bg-white hover:bg-ifood-red hover:text-white text-ifood-dark transition-all duration-300 px-5 py-2 rounded-full font-bold text-xs uppercase tracking-wider flex items-center gap-2">
+                <i class="fa-solid fa-handshake"></i> Pedidos de Apoio
+            </a>
+        </div>
+    </header>
+
+    <!-- SECÇÃO HERO (CAPA EXECUTIVA) -->
+    <section class="relative min-h-screen flex flex-col justify-center items-center px-6 text-center pt-20 overflow-hidden">
+        <!-- Efeitos de iluminação de fundo -->
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-ifood-red/20 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-red-900/10 rounded-full blur-[150px] pointer-events-none"></div>
+        
+        <div class="z-10 max-w-5xl mx-auto space-y-6">
+            <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-bold uppercase tracking-widest text-ifood-red">
+                <span class="w-2 h-2 rounded-full bg-ifood-red animate-ping"></span> PLANEAMENTO EXECUTIVO 2026
+            </span>
+            <h1 class="text-5xl md:text-8xl font-black font-display tracking-tight leading-none">
+                ELEIÇÃO GERAL <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-ifood-red to-orange-500">DE BENEFÍCIOS 2026</span>
+            </h1>
+            <p class="text-lg md:text-2xl text-white/80 max-w-3xl mx-auto font-light leading-relaxed">
+                Uma experiência mais simples, flexível e conectada ao futuro dos benefícios para os nossos Foodlovers.
+            </p>
+            <div class="pt-6 flex flex-wrap justify-center gap-4">
+                <a href="#parceiros" class="bg-ifood-red hover:bg-ifood-darkRed text-white px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 shadow-lg shadow-ifood-red/25 transform hover:-translate-y-1">
+                    Explorar Estratégia <i class="fa-solid fa-chevron-down ml-2 text-sm"></i>
+                </a>
+                <a href="#cronograma" class="bg-white/5 hover:bg-white/10 border border-white/10 text-white px-8 py-4 rounded-full font-bold text-lg transition-all duration-300">
+                    Cronograma de Comunicação
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECÇÃO 1: NOVOS PARCEIROS (PAINEL UNIFICADO E INTERATIVO) -->
+    <section id="parceiros" class="py-24 px-6 md:px-12 max-w-7xl mx-auto border-t border-white/5 relative">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+            <div>
+                <span class="text-ifood-red font-bold text-xs uppercase tracking-widest block mb-2">// NOVAS ADERÊNCIAS E SOLUÇÕES</span>
+                <h2 class="text-3xl md:text-5xl font-black font-display">Novos Parceiros de Impacto</h2>
+            </div>
+            <p class="text-ifood-muted max-w-md mt-4 md:mt-0">
+                Uma visão consolidada dos novos operadores e facilidades integradas no ecossistema de benefícios de 2026.
+            </p>
+        </div>
+
+        <!-- Grelha de Parceiros com Botões Detalhados -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <!-- Card 1: AVUS -->
+            <div class="glass-card rounded-2xl p-8 flex flex-col justify-between hover:border-ifood-red/30 transition-all duration-300 relative group overflow-hidden">
+                <div class="absolute top-0 right-0 w-24 h-24 bg-ifood-red/5 rounded-bl-full pointer-events-none group-hover:bg-ifood-red/10 transition-all"></div>
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-ifood-red/10 flex items-center justify-center text-ifood-red mb-6">
+                        <i class="fa-solid fa-house-medical text-2xl"></i>
+                    </div>
+                    <span class="text-xs font-mono text-ifood-red uppercase tracking-wider block mb-1">Saúde Familiar</span>
+                    <h3 class="text-2xl font-bold mb-3 font-display">AVUS</h3>
+                    <p class="text-sm text-white/70 leading-relaxed mb-6">
+                        Acesso facilitado à saúde para pais e agregados dos Foodlovers. <strong>Não é um plano de saúde tradicional</strong>, mas uma rede completa com link de contratação exclusivo.
+                    </p>
+                </div>
+                <button onclick="openModal('modal-avus')" class="w-full py-3 bg-white/5 hover:bg-ifood-red hover:text-white text-white rounded-xl text-sm font-bold transition-all flex items-center justify-center gap-2">
+                    Ver detalhes completos <i class="fa-solid fa-arrow-right text-xs"></i>
+                </button>
+            </div>
+
+            <!-- Card 2: STAY PREVIDÊNCIA -->
+            <div class="glass-card rounded-2xl p-8 flex flex-col justify-between hover:border-ifood-red/30 transition-all duration-300 relative group overflow-hidden">
+                <div class="absolute top-0 right-0 w-24 h-24 bg-ifood-red/5 rounded-bl-full pointer-events-none group-hover:bg-ifood-red/10 transition-all"></div>
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-400 mb-6">
+                        <i class="fa-solid fa-piggy-bank text-2xl"></i>
+                    </div>
+                    <span class="text-xs font-mono text-emerald-400 uppercase tracking-wider block mb-1">Futuro Financeiro</span>
+                    <h3 class="text-2xl font-bold mb-3 font-display">Stay Previdência</h3>
+                    <p class="text-sm text-white/70 leading-relaxed mb-6">
+                        Previdência privada por adesão com isenção de taxa de carregamento. Contratação 100% digital e bónus progressivos de cashback corporativo.
+                    </p>
+                </div>
+                <button onclick="openModal('modal-stay')" class="w-full py-3 bg-white/5 hover:bg-ifood-red hover:text-white text-white rounded-xl text-sm font-bold transition-all flex items-center justify-center gap-2">
+                    Ver detalhes completos <i class="fa-solid fa-arrow-right text-xs"></i>
+                </button>
+            </div>
+
+            <!-- Card 3: TELEMEDICINA PET -->
+            <div class="glass-card rounded-2xl p-8 flex flex-col justify-between hover:border-ifood-red/30 transition-all duration-300 relative group overflow-hidden">
+                <div class="absolute top-0 right-0 w-24 h-24 bg-ifood-red/5 rounded-bl-full pointer-events-none group-hover:bg-ifood-red/10 transition-all"></div>
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center text-cyan-400 mb-6">
+                        <i class="fa-solid fa-paw text-2xl"></i>
+                    </div>
+                    <span class="text-xs font-mono text-cyan-400 uppercase tracking-wider block mb-1">Cuidado Pet</span>
+                    <h3 class="text-2xl font-bold mb-3 font-display">Telemedicina Pets</h3>
+                    <p class="text-sm text-white/70 leading-relaxed mb-6">
+                        Consultas veterinárias online, gratuitas e ilimitadas para cães e gatos de todos os Foodlovers. Entenda a jornada de onboarding e suporte centralizado.
+                    </p>
+                </div>
+                <button onclick="openModal('modal-pet-telemed')" class="w-full py-3 bg-white/5 hover:bg-ifood-red hover:text-white text-white rounded-xl text-sm font-bold transition-all flex items-center justify-center gap-2">
+                    Ver detalhes completos <i class="fa-solid fa-arrow-right text-xs"></i>
+                </button>
+            </div>
+
+            <!-- Card 4: MEU PET VIA CRÉDITO -->
+            <div class="glass-card rounded-2xl p-8 flex flex-col justify-between hover:border-ifood-red/30 transition-all duration-300 relative group overflow-hidden">
+                <div class="absolute top-0 right-0 w-24 h-24 bg-ifood-red/5 rounded-bl-full pointer-events-none group-hover:bg-ifood-red/10 transition-all"></div>
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-400 mb-6">
+                        <i class="fa-solid fa-credit-card text-2xl"></i>
+                    </div>
+                    <span class="text-xs font-mono text-amber-400 uppercase tracking-wider block mb-1">Autonomia de Pagamento</span>
+                    <h3 class="text-2xl font-bold mb-3 font-display">Meu Pet via Crédito</h3>
+                    <p class="text-sm text-white/70 leading-relaxed mb-6">
+                        Nova modalidade facilitada de contratação dos planos Meu Pet Club diretamente no cartão de crédito do Foodlover, dando flexibilidade fora da folha.
+                    </p>
+                </div>
+                <button onclick="openModal('modal-pet-credito')" class="w-full py-3 bg-white/5 hover:bg-ifood-red hover:text-white text-white rounded-xl text-sm font-bold transition-all flex items-center justify-center gap-2">
+                    Ver detalhes completos <i class="fa-solid fa-arrow-right text-xs"></i>
+                </button>
+            </div>
+
+            <!-- Card 5: AGENTE BENÍCIO -->
+            <div class="glass-card rounded-2xl p-8 flex flex-col justify-between hover:border-ifood-red/30 transition-all duration-300 relative group overflow-hidden lg:col-span-2">
+                <div class="absolute top-0 right-0 w-48 h-48 bg-ifood-red/5 rounded-bl-full pointer-events-none group-hover:bg-ifood-red/10 transition-all"></div>
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-400 mb-6">
+                        <i class="fa-solid fa-robot text-2xl"></i>
+                    </div>
+                    <span class="text-xs font-mono text-purple-400 uppercase tracking-wider block mb-1">Inteligência Artificial Co-Pilot</span>
+                    <h3 class="text-3xl font-bold mb-3 font-display">Agente Benício</h3>
+                    <p class="text-base text-white/75 leading-relaxed mb-6">
+                        O novo consultor virtual baseado em Inteligência Artificial Generativa que guiará cada Foodlover durante o processo de escolha, analisando o momento de vida de forma personalizada e livre de atritos.
+                    </p>
+                </div>
+                <button onclick="openModal('modal-benicio')" class="w-fit px-8 py-3 bg-white/5 hover:bg-ifood-red hover:text-white text-white rounded-xl text-sm font-bold transition-all flex items-center gap-2">
+                    Explorar IA de Atendimento <i class="fa-solid fa-arrow-right text-xs"></i>
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECÇÃO 2: EVOLUÇÕES & MELHORIAS -->
+    <section id="melhorias" class="py-24 bg-ifood-grayDark/50 border-t border-b border-white/5 relative">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <span class="text-ifood-red font-bold text-xs uppercase tracking-widest block mb-2">// O QUE ESTÁ A EVOLUIR</span>
+            <h2 class="text-3xl md:text-5xl font-black font-display mb-12">Melhorias & Recursos Futuros</h2>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                
+                <!-- Seguro de Vida -->
+                <div class="bg-ifood-dark/75 border border-white/5 rounded-2xl p-8">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-lg bg-red-500/10 flex items-center justify-center text-red-500">
+                            <i class="fa-solid fa-shield-heart text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-display">Seguro de Vida</h3>
+                    </div>
+                    <p class="text-white/70 text-sm leading-relaxed mb-6">
+                        Ampliámos a rede de suporte. A partir de 2026, o <strong>auxílio funeral passa a abranger também os pais</strong> de todos os Foodlovers, estendendo o amparo familiar para além da cobertura tradicional do colaborador.
+                    </p>
+                    <div class="bg-white/5 rounded-xl p-4 text-xs space-y-2">
+                        <div class="flex justify-between border-b border-white/5 pb-2">
+                            <span class="text-ifood-muted">Status:</span>
+                            <span class="text-emerald-400 font-bold">Ativo em 2026</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-ifood-muted">Cobertura:</span>
+                            <span class="text-white">Funeral Ampliado para Pais</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carteira Flex -->
+                <div class="bg-ifood-dark/75 border border-white/5 rounded-2xl p-8">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-400">
+                            <i class="fa-solid fa-wallet text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-display">Carteira Flex</h3>
+                    </div>
+                    <p class="text-white/70 text-sm leading-relaxed mb-6">
+                        O antigo "Reembolso Flex" evolui para <strong>Carteira Flex</strong>. Um ecossistema de uso muito mais simples, flexível e intuitivo, permitindo novos canais de utilização, incluindo investimentos diretos em idiomas.
+                    </p>
+                    <div class="bg-white/5 rounded-xl p-4 text-xs space-y-2">
+                        <div class="flex justify-between border-b border-white/5 pb-2">
+                            <span class="text-ifood-muted">Status:</span>
+                            <span class="text-emerald-400 font-bold">Nova Nomenclatura</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-ifood-muted">Flexibilidade:</span>
+                            <span class="text-white">Multiuso e Idiomas</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Botão de IA no Portal -->
+                <div class="bg-gradient-to-br from-purple-950/40 to-ifood-dark border border-purple-500/20 rounded-2xl p-8 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 px-3 py-1 bg-purple-500 text-white text-[10px] uppercase font-bold tracking-widest rounded-bl-xl font-mono">
+                        EM BREVE
+                    </div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-lg bg-purple-500/20 flex items-center justify-center text-purple-400">
+                            <i class="fa-solid fa-sparkles text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-display text-purple-300">Botão de IA no Portal</h3>
+                    </div>
+                    <p class="text-white/70 text-sm leading-relaxed mb-6">
+                        Integrado diretamente no novo portal de benefícios, o botão de inteligência artificial de autoatendimento estará disponível em breve para simular cenários de escolha, tirar dúvidas operacionais e recomendar as melhores coberturas com base em modelos de dados inteligentes.
+                    </p>
+                    <div class="bg-purple-900/10 border border-purple-500/10 rounded-xl p-4 text-xs space-y-2">
+                        <div class="flex justify-between">
+                            <span class="text-purple-300/70">Lançamento estimado:</span>
+                            <span class="text-purple-300 font-bold">Fase de Eleição 2026</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECÇÃO 3: CONSOLIDAÇÃO ESTRATÉGICA (DESCONTINUAÇÕES & NOVAS REGRAS) -->
+    <section id="consolidacao" class="py-24 px-6 md:px-12 max-w-7xl mx-auto relative">
+        <span class="text-ifood-red font-bold text-xs uppercase tracking-widest block mb-2">// EFICIÊNCIA E SIMPLIFICAÇÃO</span>
+        <h2 class="text-3xl md:text-5xl font-black font-display mb-6">Consolidação Estratégica</h2>
+        <p class="text-ifood-muted max-w-2xl mb-12">
+            A maturidade de um portefólio de benefícios também depende de simplificar rotas e unificar soluções. Reduzimos complexidades desnecessárias para viabilizar novas frentes de maior impacto.
+        </p>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+            
+            <!-- Descontinuações de Portfólio -->
+            <div class="lg:col-span-7 glass-card rounded-2xl p-8 flex flex-col justify-between">
+                <div>
+                    <h3 class="text-2xl font-bold font-display mb-6 border-b border-white/5 pb-4 text-red-500">
+                        <i class="fa-solid fa-circle-minus mr-2"></i> Ajustes de Carteira & Upgrade Exclusivo
+                    </h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="text-2xl text-ifood-muted mt-1"><i class="fa-solid fa-language"></i></div>
+                            <div>
+                                <h4 class="font-bold">Idiomas Complementar</h4>
+                                <p class="text-sm text-ifood-muted">Descontinuado. A alternativa integrada de investimentos em idiomas passa a ser gerida via carteira flexível na <strong>Carteira Flex</strong>.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="text-2xl text-ifood-muted mt-1"><i class="fa-solid fa-plane-departure"></i></div>
+                            <div>
+                                <h4 class="font-bold">Plano de Viagens (Travel Cash)</h4>
+                                <p class="text-sm text-ifood-muted">Descontinuado em definitivo do portefólio oficial de benefícios eletivos do iFood.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="text-2xl text-ifood-muted mt-1"><i class="fa-solid fa-ban"></i></div>
+                            <div>
+                                <h4 class="font-bold">Plano Pet Emergencial</h4>
+                                <p class="text-sm text-ifood-muted">Deixará de ser comercializado por uma decisão estratégica do próprio parceiro operador.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 bg-emerald-500/10 border border-emerald-500/30 p-4 rounded-xl">
+                            <div class="text-2xl text-emerald-400 mt-1 animate-pulse"><i class="fa-solid fa-arrow-trend-up"></i></div>
+                            <div>
+                                <h4 class="font-bold text-emerald-300">Plano Pet Sênior: Descontinuação no Beneflex & Upgrade Grátis!</h4>
+                                <p class="text-sm text-white/80">O plano Pet Sênior deixa de ser comercializado apenas no Beneflex. Como uma excelente notícia, <strong>os colaboradores que possuem atualmente o plano "De Boa" serão migrados automaticamente e de forma totalmente gratuita para o plano "Plus"</strong>, representando um upgrade de categoria sem custos adicionais!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nova Funcionalidade de Exclusão -->
+            <div class="lg:col-span-5 bg-gradient-to-br from-red-950/20 to-ifood-dark border border-ifood-red/20 rounded-2xl p-8 flex flex-col justify-between">
+                <div>
+                    <span class="text-ifood-red font-bold text-xs uppercase tracking-wider block mb-2">Nova Funcionalidade Operacional</span>
+                    <h3 class="text-2xl font-bold font-display mb-4">Exclusão Autónoma de Dependentes</h3>
+                    <p class="text-sm text-white/80 leading-relaxed mb-6">
+                        Durante os períodos ativos de eleição geral de benefícios, os colaboradores poderão realizar a <strong>exclusão voluntária de dependentes sem necessidade de justificativa</strong> legal no portal.
+                    </p>
+                    <div class="bg-ifood-red/10 border border-ifood-red/30 rounded-xl p-5 text-sm space-y-3">
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-triangle-exclamation text-ifood-red mt-1 text-base"></i>
+                            <p class="text-xs text-white/90">
+                                <strong>Regra de Carência:</strong> A exclusão é imediata, mas o retorno do dependente ao plano em períodos futuros exigirá o cumprimento de carência padrão sem exceções.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECÇÃO 4: FEIRA DE BENEFÍCIOS 2026 -->
+    <section id="feira" class="py-24 bg-ifood-grayDark/30 border-t border-white/5 relative">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-ifood-red font-bold text-xs uppercase tracking-widest block mb-2">// O GRANDE RETORNO INTERATIVO</span>
+                <h2 class="text-4xl md:text-6xl font-black font-display mb-4">A Feira das Arenas 2026</h2>
+                <p class="text-ifood-muted text-lg mb-6">
+                    Pela primeira vez na **quadra de esportes do escritório de Osasco**, a nossa feira traz uma experiência revolucionária dividida em **Arenas Temáticas**, além de uma **Feira Virtual** completa para garantir o engajamento e a participação nos sorteios de todos os Foodlovers do Brasil.
+                </p>
+                <div class="inline-flex gap-4">
+                    <span class="bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-mono text-xs px-3 py-1.5 rounded-full"><i class="fa-solid fa-building mr-1"></i> Arena Física (Osasco Quadra)</span>
+                    <span class="bg-purple-500/10 border border-purple-500/20 text-purple-400 font-mono text-xs px-3 py-1.5 rounded-full"><i class="fa-solid fa-globe mr-1"></i> Arena Virtual (Live & Sorteios)</span>
+                </div>
+            </div>
+
+            <!-- MAPA DA QUADRA EM CSS INTERATIVO (Inspirado no Blueprint image_330980.png) -->
+            <div class="mb-16 bg-ifood-dark/80 rounded-2xl border border-white/10 p-6 md:p-10 relative">
+                <div class="absolute top-4 right-4 flex gap-2">
+                    <span class="w-3 h-3 rounded-full bg-green-500"></span>
+                    <span class="w-3 h-3 rounded-full bg-blue-500"></span>
+                    <span class="w-3 h-3 rounded-full bg-red-500"></span>
+                </div>
+                <h3 class="text-lg font-mono font-bold uppercase tracking-widest text-ifood-muted mb-6"><i class="fa-solid fa-map-location-dot mr-2 text-ifood-red"></i> MAPA INTERATIVO DA QUADRA: EDICAO 2026</h3>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                    <!-- Mapa das Arenas (8 cols) -->
+                    <div class="lg:col-span-8 bg-ifood-grayDark rounded-xl border border-white/5 p-4 md:p-6 grid grid-cols-2 md:grid-cols-3 gap-3 relative">
+                        
+                        <!-- Saúde e Bem-Estar Arena (Green) -->
+                        <div class="col-span-2 md:col-span-1 border border-green-500/30 bg-green-950/10 p-4 rounded-xl hover:bg-green-950/20 transition-all cursor-pointer group" onclick="focusStand('green-arena')">
+                            <span class="text-[10px] font-mono text-green-400 font-bold block mb-1 uppercase">// ARENA SAÚDE</span>
+                            <h4 class="font-bold text-white group-hover:text-green-300">Saúde & Bem-Estar</h4>
+                            <p class="text-[11px] text-ifood-muted mt-2">Wellhub, Bradesco, Unimed CNU, Vidalink, Bradesco Odonto, Avus, Meu Pet, iDoc</p>
+                        </div>
+
+                        <!-- Suporte Integral (Blue) -->
+                        <div class="col-span-1 border border-blue-500/30 bg-blue-950/10 p-4 rounded-xl hover:bg-blue-950/20 transition-all cursor-pointer group" onclick="focusStand('blue-arena')">
+                            <span class="text-[10px] font-mono text-blue-400 font-bold block mb-1 uppercase">// ARENA INTEGRAL</span>
+                            <h4 class="font-bold text-white group-hover:text-blue-300">Suporte Integral</h4>
+                            <p class="text-[11px] text-ifood-muted mt-2">Stay, Leggal, New Value, Totem Benício, Sesc</p>
+                        </div>
+
+                        <!-- iFood Benefícios / VA-VR (Red) -->
+                        <div class="col-span-1 border border-red-500/30 bg-red-950/10 p-4 rounded-xl hover:bg-red-950/20 transition-all cursor-pointer group" onclick="focusStand('red-arena')">
+                            <span class="text-[10px] font-mono text-red-400 font-bold block mb-1 uppercase">// COPA COPA COPA</span>
+                            <h4 class="font-bold text-white group-hover:text-red-300">iFood Benefícios</h4>
+                            <p class="text-[11px] text-ifood-muted mt-2">VA/VR, Cultura, Mobilidade, Decolar, Vale Bônus, Lockton</p>
+                        </div>
+
+                        <!-- Layout Visual da Quadra -->
+                        <div class="col-span-2 md:col-span-3 bg-ifood-dark/50 border border-white/5 rounded-lg p-3 text-center text-xs font-mono text-ifood-muted">
+                            [ TIME DE BENEFÍCIOS • CLIMA DE COPA DO MUNDO • ARQUIBANCADAS ]
+                        </div>
+                    </div>
+
+                    <!-- Detalhes Rápidos das Arenas (4 cols) -->
+                    <div id="arena-info-display" class="lg:col-span-4 glass-card rounded-xl p-6 space-y-4">
+                        <div class="flex items-center gap-2 mb-2">
+                            <div class="w-3 h-3 rounded-full bg-ifood-red"></div>
+                            <h4 class="text-sm font-mono font-bold uppercase text-white">Explorar Arenas</h4>
+                        </div>
+                        <p class="text-xs text-ifood-muted">Clique em uma das Arenas no mapa virtual ao lado para visualizar os stands, as regras de sorteio e as ativações presenciais organizadas para esta edição.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stands e Ativações em Detalhes -->
+            <div class="space-y-12">
+                
+                <!-- Arena Verde: Saúde & Bem-Estar -->
+                <div id="green-arena-list" class="border-l-4 border-green-500 pl-6 space-y-6">
+                    <h3 class="text-2xl font-bold font-display text-green-400 flex items-center gap-2">
+                        <i class="fa-solid fa-heartpulse"></i> Arena Saúde & Bem-Estar
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        
+                        <!-- Wellhub -->
+                        <div class="bg-ifood-dark border border-white/5 rounded-2xl p-6 flex flex-col justify-between">
+                            <div>
+                                <h4 class="font-bold text-white text-lg">Wellhub</h4>
+                                <p class="text-xs text-ifood-muted mt-1">Sorteio de Smartwatch e Câmera Fotográfica com IA!</p>
+                                <p class="text-xs text-white/80 mt-3 leading-relaxed">
+                                    <strong>Elegibilidade para Sorteio:</strong> Válido para novos aderentes, Foodlovers que fizerem Upgrade de plano, incluírem dependentes ou que já possuam plano ativo na plataforma.
+                                </p>
+                            </div>
+                            <div class="border-t border-white/5 pt-4 mt-4 text-xs font-mono text-green-400">Ativação On-site: Câmera IA</div>
+                        </div>
+
+                        <!-- AVUS -->
+                        <div class="bg-ifood-dark border border-white/5 rounded-2xl p-6 flex flex-col justify-between">
+                            <div>
+                                <h4 class="font-bold text-white text-lg">AVUS</h4>
+                                <p class="text-xs text-ifood-muted mt-1">Sorteio de iPhone!</p>
+                                <p class="text-xs text-white/80 mt-3 leading-relaxed">
+                                    <strong>Elegibilidade para Sorteio:</strong> O Foodlover (tanto presencial como na feira virtual) deve responder integralmente ao Quiz de Saúde da AVUS.
+                                </p>
+                            </div>
+                            <div class="border-t border-white/5 pt-4 mt-4 text-xs font-mono text-green-400">Ativação On-site: Saúde Quiz</div>
+                        </div>
+
+                        <!-- Vidalink -->
+                        <div class="bg-ifood-dark border border-white/5 rounded-2xl p-6 flex flex-col justify-between">
+                            <div>
+                                <h4 class="font-bold text-white text-lg">Vidalink</h4>
+                                <p class="text-xs text-ifood-muted mt-1">Sorteio de Câmera Instax Mini (Polaroid) & Brindes!</p>
+                                <p class="text-xs text-white/80 mt-3 leading-relaxed">
+                                    <strong>Presencial:</strong> Jogo virtual simulando a jornada (cadastro de receita, achar farmácia e resgatar brinde). Requer app Vidalink instalado e ativo.<br>
+                                    <strong>Online:</strong> Quiz de 5 perguntas com retorno via WhatsApp para concorrer ao Kit Pausa que Restaura.
+                                </p>
+                            </div>
+                            <div class="border-t border-white/5 pt-4 mt-4 text-xs font-mono text-green-400">Ativação On-site: Game & Instax Mini</div>
+                        </div>
+
+                        <!-- Bradesco Saúde -->
+                        <div class="bg-ifood-dark border border-white/5 rounded-2xl p-6 flex flex-col justify-between">
+                            <div>
+                                <h4 class="font-bold text-white text-lg">Bradesco Saúde</h4>
+                                <p class="text-xs text-ifood-muted mt-1">Prevenção e Consultoria Ativa</p>
+                                <p class="text-xs text-white/80 mt-3 leading-relaxed">
+                                    <strong>Ativação Presencial:</strong> Cabine dedicada para a realização de exames preventivos rápidos (coleta de sinais vitais e checkup expresso) com suporte direto de especialistas. Sem sorteio de brindes.
+                                </p>
+                            </div>
+                            <div class="border-t border-white/5 pt-4 mt-4 text-xs font-mono text-green-400">Ativação On-site: Cabine Preventiva</div>
+                        </div>
+
+                        <!-- Bradesco Odonto -->
+                        <div class="bg-ifood-dark border border-white/5 rounded-2xl p-6 flex flex-col justify-between">
+                            <div>
+                                <h4 class="font-bold text-white text-lg">Bradesco Odonto</h4>
+                                <p class="text-xs text-ifood-muted mt-1">Seu Sorriso Importa para Nós</p>
+                                <p class="text-xs text-white/80 mt-3 leading-relaxed">
+                                    <strong>Ativação Presencial:</strong> Uma cabine fotográfica dinâmica focada em capturar e registrar o sorriso dos Foodlovers durante o evento.
+                                </p>
+                            </div>
+                            <div class="border-t border-white/5 pt-4 mt-4 text-xs font-mono text-green-400">Ativação On-site: Cabine de Fotos</div>
+                        </div>
+
+                        <!-- Meu Pet Club -->
+                        <div class="bg-ifood-dark border border-white/5 rounded-2xl p-6 flex flex-col justify-between">
+                            <div>
+                                <h4 class="font-bold text-white text-lg">Meu Pet Club</h4>
+                                <p class="text-xs text-ifood-muted mt-1">Brindes e Chaveiros Exclusivos</p>
+                                <p class="text-xs text-white/80 mt-3 leading-relaxed">
+                                    <strong>Ativação Presencial:</strong> Distribuição de roupinhas e bandanas personalizadas temáticas da Copa do Mundo, além de chaveiros com diversas raças de cães.
+                                </p>
+                            </div>
+                            <div class="border-t border-white/5 pt-4 mt-4 text-xs font-mono text-green-400">Ativação On-site: Copa Pet Wardrobe</div>
+                        </div>
+
+                        <!-- iDoc, Mar Saúde & eyeCare -->
+                        <div class="bg-ifood-dark border border-white/5 rounded-2xl p-6 flex flex-col justify-between col-span-1 md:col-span-2 lg:col-span-3">
+                            <div>
+                                <h4 class="font-bold text-white text-lg">Sua Saúde em Dia (Parceria com Time de Saúde)</h4>
+                                <p class="text-xs text-ifood-muted mt-1">Arena Dedicada ao iDoc, Mar Saúde e eyeCare</p>
+                                <p class="text-xs text-white/80 mt-3 leading-relaxed">
+                                    Um espaço totalmente integrado focando na saúde primária e prevenção dos Foodlovers. Teremos a <strong>Mar Saúde</strong> realizando coleta de exames expressos e a equipe de <strong>eyeCare</strong> oferecendo cuidados e testes rápidos de saúde ocular.
+                                </p>
+                            </div>
+                            <div class="border-t border-white/5 pt-4 mt-4 text-xs font-mono text-green-400">Ativação On-site: Cuidados com os Olhos & Exames</div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Arena Azul: Suporte Integral -->
+                <div id="blue-arena-list" class="border-l-4 border-blue-500 pl-6 space-y-6">
+                    <h3 class="text-2xl font-bold font-display text-blue-400 flex items-center gap-2">
+                        <i class="fa-solid fa-umbrella"></i> Arena Suporte Integral
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        
+                        <!-- Stay -->
+                        <div class="bg-ifood-dark border border-white/5 rounded-2xl p-6 flex flex-col justify-between">
+                            <div>
+                                <h4 class="font-bold text-white text-lg">Stay Previdência</h4>
+                                <p class="text-xs text-ifood-muted mt-1">Bonificação por Passar no Simulador de Sonhos</p>
+                                <p class="text-xs text-white/80 mt-3 leading-relaxed">
+                                    Todos os Foodlovers que passarem pela jornada da calculadora de sonhos recebem bónus garantidos de <strong>10% de cashback</strong> na primeira aplicação e ganham links para o bónus de indicação de +5%.
+                                </p>
+                            </div>
+                            <div class="border-t border-white/5 pt-4 mt-4 text-xs font-mono text-blue-400">Ativação On-site: Simulador de Sonhos</div>
+                        </div>
+
+                        <!-- Leggal -->
+                        <div class="bg-ifood-dark border border-white/5 rounded-2xl p-6 flex flex-col justify-between">
+                            <div>
+                                <h4 class="font-bold text-white text-lg">Leggal</h4>
+                                <p class="text-xs text-ifood-muted mt-1">Sorteio de Cafeteira Nespresso!</p>
+                                <p class="text-xs text-white/80 mt-3 leading-relaxed">
+                                    <strong>Elegibilidade para Sorteio:</strong> Aberto para todos os que responderem de forma completa ao Quiz de Necessidade Jurídica no stand ou plataforma virtual.
+                                </p>
+                            </div>
+                            <div class="border-t border-white/5 pt-4 mt-4 text-xs font-mono text-blue-400">Ativação On-site: Quiz Legal</div>
+                        </div>
+
+                        <!-- New Value -->
+                        <div class="bg-ifood-dark border border-white/5 rounded-2xl p-6 flex flex-col justify-between">
+                            <div>
+                                <h4 class="font-bold text-white text-lg">New Value</h4>
+                                <p class="text-xs text-ifood-muted mt-1">Sorteio de Camiseta Oficial da Copa!</p>
+                                <p class="text-xs text-white/80 mt-3 leading-relaxed">
+                                    Degustações especiais de produtos de marcas parceiras no stand físico. Aberto ao sorteio da camiseta para todos que realizarem o cadastro na plataforma de benefícios New Value.
+                                </p>
+                            </div>
+                            <div class="border-t border-white/5 pt-4 mt-4 text-xs font-mono text-blue-400">Ativação On-site: Degustação & Copa T-shirt</div>
+                        </div>
+
+                        <!-- Lockton -->
+                        <div class="bg-ifood-dark border border-white/5 rounded-2xl p-6 flex flex-col justify-between">
+                            <div>
+                                <h4 class="font-bold text-white text-lg">Lockton Corretora</h4>
+                                <p class="text-xs text-ifood-muted mt-1">Atendimento Geral & Eleição Assistida</p>
+                                <p class="text-xs text-white/80 mt-3 leading-relaxed">
+                                    Ponto físico focado na resolução rápida de dúvidas complexas, apoio de transição de planos e suporte especializado com o auxílio do <strong>Agente Virtual Benício</strong>.
+                                </p>
+                            </div>
+                            <div class="border-t border-white/5 pt-4 mt-4 text-xs font-mono text-blue-400">Ativação On-site: Eleição Assistida</div>
+                        </div>
+
+                        <!-- Sesc -->
+                        <div class="bg-ifood-dark border border-white/5 rounded-2xl p-6 flex flex-col justify-between">
+                            <div>
+                                <h4 class="font-bold text-white text-lg">SESC</h4>
+                                <p class="text-xs text-ifood-muted mt-1">Integração Cultural e Bem-estar</p>
+                                <p class="text-xs text-amber-400 mt-3 font-semibold leading-relaxed">
+                                    <i class="fa-solid fa-clock-rotate-left mr-1"></i> A proposta oficial do SESC será finalizada e enviada na próxima terça-feira (09/06).
+                                </p>
+                            </div>
+                            <div class="border-t border-white/5 pt-4 mt-4 text-xs font-mono text-blue-400">Status: Aguardando Proposta 09/06</div>
+                        </div>
+
+                        <!-- Outros Parceiros de Atendimento CNU & Zurich -->
+                        <div class="bg-ifood-dark border border-white/5 rounded-2xl p-6 flex flex-col justify-between">
+                            <div>
+                                <h4 class="font-bold text-white text-lg">Atendimento Geral</h4>
+                                <p class="text-xs text-ifood-muted mt-1">Suporte Unimed CNU & Zurich Seguro de Vida</p>
+                                <p class="text-xs text-white/80 mt-3 leading-relaxed">
+                                    Bancada exclusiva com consultores dedicados da <strong>Unimed CNU</strong> e <strong>Zurich</strong> oferecendo atendimento padrão para dúvidas operacionais de cobertura de apólices e redes credenciadas.
+                                </p>
+                            </div>
+                            <div class="border-t border-white/5 pt-4 mt-4 text-xs font-mono text-blue-400">Ativação On-site: Dúvidas Operacionais</div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Arena Vermelha: iFood Benefícios -->
+                <div id="red-arena-list" class="border-l-4 border-red-500 pl-6 space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        
+                        <!-- iFood Beneficios Premium -->
+                        <div class="bg-gradient-to-br from-red-950/20 to-ifood-dark border border-red-500/20 rounded-2xl p-8 lg:col-span-3 flex flex-col justify-between relative overflow-hidden group">
+                            <div class="absolute top-0 right-0 px-4 py-1 bg-ifood-red text-white text-[10px] uppercase font-bold tracking-widest rounded-bl-xl font-mono animate-pulse">
+                                ARENA EXCLUSIVA
+                            </div>
+                            <div>
+                                <span class="text-xs font-mono text-ifood-red uppercase tracking-wider block mb-1">Clima de Copa do Mundo</span>
+                                <h3 class="text-2xl font-bold mb-3 font-display text-white">Nosso Cartão de Vantagens</h3>
+                                <p class="text-sm text-white/75 leading-relaxed mb-6">
+                                    Uma arena completa unindo os times de <strong>iFood Benefícios, Decolar e Vale Bônus</strong> para que os Foodlovers entendam em profundidade todas as novas oportunidades do nosso ecossistema de cartão flexível.
+                                </p>
+                                
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-white/5 p-4 rounded-xl text-xs border border-white/5">
+                                    <div>
+                                        <h4 class="font-bold text-ifood-red mb-2 uppercase tracking-wide"><i class="fa-solid fa-gamepad mr-1"></i> Dinâmica Presencial: Chute a Gol</h4>
+                                        <p class="text-white/80 leading-relaxed">
+                                            Quem acertar o chute ao gol na nossa quadra de Osasco concorre ao sorteio de <strong>duas camisas oficiais da Seleção Brasileira</strong> (fornecidas via voucher Centauro).
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-purple-400 mb-2 uppercase tracking-wide"><i class="fa-solid fa-display mr-1"></i> Dinâmica Virtual</h4>
+                                        <p class="text-ifood-muted leading-relaxed">
+                                            As experiências e sorteios para a modalidade online dos Foodlovers remotos estão atualmente aguardando retorno de alinhamento com os parceiros.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECÇÃO 5: GOVERNANÇA (CASO DE AFASTADOS) -->
+    <section id="governanca" class="py-24 px-6 md:px-12 max-w-7xl mx-auto border-t border-white/5">
+        <div class="max-w-4xl mx-auto">
+            <!-- Case Afastados Card - Centrado e focado -->
+            <div class="bg-ifood-grayDark/40 border border-white/5 rounded-2xl p-8 md:p-12 relative overflow-hidden">
+                <div class="absolute top-0 right-0 bg-red-500 text-white font-mono text-[10px] uppercase font-bold tracking-widest px-4 py-1.5 rounded-bl-xl">
+                    DECISÃO OPERACIONAL
+                </div>
+                <span class="text-ifood-red font-bold text-xs uppercase tracking-widest block mb-2">// CASO EXECUTIVO</span>
+                <h3 class="text-2xl md:text-4xl font-black font-display mb-4 text-white flex items-center gap-2">
+                    <i class="fa-solid fa-lock text-ifood-red"></i> Colaboradores Afastados pela Previdência
+                </h3>
+                <p class="text-sm md:text-base text-white/70 leading-relaxed mb-8">
+                    Colaboradores atualmente afastados por questões previdenciárias possuem seus acessos corporativos (Active Directory, VPN, contas corporativas) suspensos por razões padrão de cibersegurança e integridade regulatória.
+                </p>
+
+                <!-- Regras e Processo de Liberação -->
+                <div class="space-y-4">
+                    <div class="bg-ifood-dark border border-white/5 rounded-xl p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-xs font-bold uppercase tracking-wider text-ifood-red">Liberação Programada</span>
+                            <span class="text-xs font-mono text-ifood-muted bg-white/5 px-2.5 py-0.5 rounded">Dia Único</span>
+                        </div>
+                        <h4 class="font-bold text-white text-lg mb-1">Dia 19/06</h4>
+                        <p class="text-xs md:text-sm text-ifood-muted leading-relaxed">
+                            Apenas nesta data os acessos serão liberados temporariamente para permitir a realização da Eleição de Benefícios por esses colaboradores. <strong>Não haverá aberturas posteriores</strong> ou renegociação de prazos por conformidade de segurança.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+                        <div class="bg-white/5 p-4 rounded-xl border border-white/5">
+                            <span class="text-ifood-muted block mb-1">Acompanhamento</span>
+                            <span class="text-white font-bold">Security Team Monitorizando</span>
+                        </div>
+                        <div class="bg-white/5 p-4 rounded-xl border border-white/5">
+                            <span class="text-ifood-muted block mb-1">Inclusão Garantida</span>
+                            <span class="text-white font-bold">Foco em Experiência e Participação</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECÇÃO 6: PEDIDOS DE APOIO -->
+    <section id="apoio" class="py-24 bg-gradient-to-t from-ifood-dark to-ifood-grayDark/30 border-t border-white/5 relative">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-ifood-red font-bold text-xs uppercase tracking-widest block mb-2">// COLABORAÇÃO ENTRE ÁREAS</span>
+                <h2 class="text-4xl md:text-6xl font-black font-display mb-4">Pedidos de Apoio</h2>
+                <p class="text-ifood-muted text-lg">
+                    O sucesso da Eleição Geral 2026 depende de uma construção conjunta entre as frentes de People, Produto, Tech, Segurança e Comunicação.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Time Connect -->
+                <div class="bg-ifood-dark/80 border border-white/5 rounded-2xl p-8 relative overflow-hidden group hover:border-ifood-red/20 transition-all">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-ifood-red/5 rounded-bl-full pointer-events-none group-hover:bg-ifood-red/10 transition-all"></div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-12 rounded-xl bg-ifood-red/10 flex items-center justify-center text-ifood-red">
+                            <i class="fa-solid fa-bullhorn text-xl"></i>
+                        </div>
+                        <div>
+                            <span class="text-xs font-mono text-ifood-red uppercase tracking-wider block">Parceiro Crítico</span>
+                            <h3 class="text-2xl font-bold font-display">Time Connect</h3>
+                        </div>
+                    </div>
+                    <ul class="space-y-4 text-sm text-white/85">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-square-check text-ifood-red mt-1"></i>
+                            <span>Disparos de <strong>Broadcasts</strong> de comunicação segmentados para todas as faixas e impactos específicos de alteração.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-square-check text-ifood-red mt-1"></i>
+                            <span>Atualização completa dos conteúdos e respostas de autoatendimento da assistente virtual <strong>Alli</strong> no WhatsApp (com entregas previstas de conteúdo até terça-feira, <strong>09/06</strong>).</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- SPOCs & BPs -->
+                <div class="bg-ifood-dark/80 border border-white/5 rounded-2xl p-8 relative overflow-hidden group hover:border-white/20 transition-all">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-white/5 rounded-bl-full pointer-events-none group-hover:bg-white/10 transition-all"></div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center text-white">
+                            <i class="fa-solid fa-people-group text-xl"></i>
+                        </div>
+                        <div>
+                            <span class="text-xs font-mono text-ifood-muted uppercase tracking-wider block">Monitorização Ativa</span>
+                            <h3 class="text-2xl font-bold font-display">SPOCs & BPs</h3>
+                        </div>
+                    </div>
+                    <ul class="space-y-4 text-sm text-white/85">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-square-check text-white mt-1"></i>
+                            <span>Identificação precoce de <strong>ruídos e dúvidas</strong> durante o período crítico da eleição.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-square-check text-white mt-1"></i>
+                            <span>Apoio direto na resolução de dúvidas de casos de transição (como encerramentos de planos legados ou migrações do plano de saúde pet).</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECÇÃO 7: CRONOGRAMA DE COMUNICAÇÃO (ATIVIDADES CRÍTICAS) -->
+    <section id="cronograma" class="py-24 px-6 md:px-12 max-w-7xl mx-auto relative border-t border-white/5">
+        <span class="text-ifood-red font-bold text-xs uppercase tracking-widest block mb-2">// DATA, TEMPO E MOVIMENTO</span>
+        <h2 class="text-3xl md:text-5xl font-black font-display mb-4">Cronograma de Comunicação</h2>
+        <p class="text-ifood-muted max-w-2xl mb-12">
+            Mapeamento cronológico das mensagens, públicos e canais estruturados para mitigar ruídos e garantir máxima taxa de engajamento voluntário na eleição.
+        </p>
+
+        <!-- Linha de Tempo Interativa -->
+        <div class="relative pl-8 border-l border-white/10 space-y-12">
+            
+            <!-- Item 1 -->
+            <div class="relative">
+                <div class="absolute -left-[41px] top-1 w-6 h-6 rounded-full bg-emerald-500 border-4 border-ifood-dark flex items-center justify-center text-[10px] text-white"><i class="fa-solid fa-check"></i></div>
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                    <div>
+                        <span class="text-xs font-mono font-bold text-emerald-400">03/06 — CONCLUÍDO</span>
+                        <h4 class="text-xl font-bold font-display text-white/50 line-through">TDQ: Save the Date da Eleição</h4>
+                        <p class="text-sm text-ifood-muted max-w-2xl">Lançamento oficial da data e preparação geral do clima corporativo para todos os Foodlovers.</p>
+                    </div>
+                    <span class="self-start md:self-center bg-white/5 border border-white/10 px-3 py-1 rounded text-xs font-mono uppercase text-ifood-muted">Geral / Broadcast</span>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="relative">
+                <div class="absolute -left-[41px] top-1 w-6 h-6 rounded-full bg-ifood-red border-4 border-ifood-dark"></div>
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                    <div>
+                        <span class="text-xs font-mono font-bold text-ifood-red">08/06</span>
+                        <h4 class="text-xl font-bold font-display text-white">Impacto: Planos Meu Pet & Travel Cash</h4>
+                        <p class="text-sm text-ifood-muted max-w-2xl">Disparos focados para informar sobre o encerramento do convênio de viagens Travel Cash e a readequação dos planos Pet Emergencial / Pet Sênior.</p>
+                    </div>
+                    <span class="self-start md:self-center bg-white/5 border border-white/10 px-3 py-1 rounded text-xs font-mono uppercase text-ifood-red">Segmentado / Broadcast</span>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="relative">
+                <div class="absolute -left-[41px] top-1 w-6 h-6 rounded-full bg-white/30 border-4 border-ifood-dark"></div>
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                    <div>
+                        <span class="text-xs font-mono font-bold text-ifood-muted">09/06</span>
+                        <h4 class="text-xl font-bold font-display text-white">Estagiários: Readequação do Plano de Saúde</h4>
+                        <p class="text-sm text-ifood-muted max-w-2xl">Broadcast direcionado com as regras para os estagiários que passarão pela readequação/downgrade do plano de saúde corporativo.</p>
+                    </div>
+                    <span class="self-start md:self-center bg-white/5 border border-white/10 px-3 py-1 rounded text-xs font-mono uppercase text-ifood-muted">Segmentado / Broadcast</span>
+                </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="relative">
+                <div class="absolute -left-[41px] top-1 w-6 h-6 rounded-full bg-white/30 border-4 border-ifood-dark"></div>
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                    <div>
+                        <span class="text-xs font-mono font-bold text-ifood-muted">09/06</span>
+                        <h4 class="text-xl font-bold font-display text-white">People Todos (Comunicação Geral)</h4>
+                        <p class="text-sm text-ifood-muted max-w-2xl">Disparo abrangente da equipa de People alinhando a importância e engajamento para a próxima eleição.</p>
+                    </div>
+                    <span class="self-start md:self-center bg-white/5 border border-white/10 px-3 py-1 rounded text-xs font-mono uppercase text-ifood-muted">Pessoas / Newsletter</span>
+                </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="relative">
+                <div class="absolute -left-[41px] top-1 w-6 h-6 rounded-full bg-ifood-red border-4 border-ifood-dark"></div>
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                    <div>
+                        <span class="text-xs font-mono font-bold text-ifood-red">10/06</span>
+                        <h4 class="text-xl font-bold font-display text-white">Transição: Idiomas Complementar & Carteira Flex</h4>
+                        <p class="text-sm text-ifood-muted max-w-2xl">Broadcast explicativo sobre a evolução do Reembolso Flex para Carteira Flex e o encerramento do saldo de idiomas.</p>
+                    </div>
+                    <span class="self-start md:self-center bg-white/5 border border-white/10 px-3 py-1 rounded text-xs font-mono uppercase text-ifood-red">Connect Broadcast</span>
+                </div>
+            </div>
+
+            <!-- Item 6 -->
+            <div class="relative">
+                <div class="absolute -left-[41px] top-1 w-6 h-6 rounded-full bg-white/30 border-4 border-ifood-dark"></div>
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                    <div>
+                        <span class="text-xs font-mono font-bold text-ifood-muted">10/06</span>
+                        <h4 class="text-xl font-bold font-display text-white">Líder Comunica: Spoiler dos Benefícios</h4>
+                        <p class="text-sm text-ifood-muted max-w-2xl">Disparo estratégico trazendo prévias e pílulas de engajamento direcionadas exclusivamente para as lideranças iFood.</p>
+                    </div>
+                    <span class="self-start md:self-center bg-white/5 border border-white/10 px-3 py-1 rounded text-xs font-mono uppercase text-ifood-muted">Líderes / Slack</span>
+                </div>
+            </div>
+
+            <!-- Item 7 -->
+            <div class="relative">
+                <div class="absolute -left-[41px] top-1 w-6 h-6 rounded-full bg-white/30 border-4 border-ifood-dark"></div>
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                    <div>
+                        <span class="text-xs font-mono font-bold text-ifood-muted">11/06</span>
+                        <h4 class="text-xl font-bold font-display text-white">TDQ Especial: Playbook "Vai Começar!"</h4>
+                        <p class="text-sm text-ifood-muted max-w-2xl">Apresentação oficial do playbook de regras e todos os canais explicativos da eleição.</p>
+                    </div>
+                    <span class="self-start md:self-center bg-white/5 border border-white/10 px-3 py-1 rounded text-xs font-mono uppercase text-ifood-muted">Geral / Playbook</span>
+                </div>
+            </div>
+
+            <!-- Item 8 -->
+            <div class="relative">
+                <div class="absolute -left-[41px] top-1 w-6 h-6 rounded-full bg-white/30 border-4 border-ifood-dark"></div>
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                    <div>
+                        <span class="text-xs font-mono font-bold text-ifood-muted">11/06</span>
+                        <h4 class="text-xl font-bold font-display text-white">Canal Aberto: WhatsApp Alli para Afastados</h4>
+                        <p class="text-sm text-ifood-muted max-w-2xl">Disparo transacional segmentado via WhatsApp da Alli, informando os Foodlovers afastados sobre as regras de liberação de acessos no dia 19/06.</p>
+                    </div>
+                    <span class="self-start md:self-center bg-white/5 border border-white/10 px-3 py-1 rounded text-xs font-mono uppercase text-ifood-muted">Afastados / WhatsApp</span>
+                </div>
+            </div>
+
+            <!-- Item 9 -->
+            <div class="relative bg-gradient-to-r from-red-950/10 to-transparent p-4 rounded-r-xl border-l-2 border-ifood-red">
+                <div class="absolute -left-[41px] top-5 w-6 h-6 rounded-full bg-ifood-red border-4 border-ifood-dark"></div>
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                    <div>
+                        <span class="text-xs font-mono font-bold text-ifood-red">15/06</span>
+                        <h4 class="text-xl font-bold font-display text-white">Abertura Oficial via WhatsApp Alli Broadcast</h4>
+                        <p class="text-sm text-white/80 max-w-2xl">Eleição oficialmente iniciada! Disparo massivo de engajamento e link direto de votação utilizando o WhatsApp da assistente virtual **Alli**.</p>
+                    </div>
+                    <span class="self-start md:self-center bg-white/5 border border-white/10 px-3 py-1 rounded text-xs font-mono uppercase text-ifood-red">Abertura / Connect</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECÇÃO 8: FECHO E COMPROMISSO -->
+    <section class="min-h-[70vh] flex flex-col justify-center items-center px-6 text-center relative overflow-hidden bg-ifood-dark border-t border-white/5">
+        <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-ifood-red/10 rounded-full blur-[100px] pointer-events-none"></div>
+        <div class="z-10 max-w-4xl mx-auto space-y-8">
+            <span class="bg-white/5 border border-white/10 text-ifood-red px-4 py-1 rounded-full text-xs font-bold tracking-widest uppercase">PROPÓSITO STRATEGIC-PEOPLE 2026</span>
+            <blockquote class="text-2xl md:text-5xl font-black font-display tracking-tight leading-tight text-white/90">
+                "Transformar cada interação da eleição em dado acionável que aumenta adesão, fortalece parceiros e sustenta rentabilidade."
+            </blockquote>
+            <p class="text-ifood-muted font-mono uppercase text-xs tracking-widest pt-4">iFood People & Benefits Team</p>
+        </div>
+    </section>
+
+    <!-- MODAL INFORMATIVO: AVUS -->
+    <div id="modal-avus" class="fixed inset-0 z-50 hidden bg-ifood-dark/95 backdrop-blur-md flex items-center justify-center p-4">
+        <div class="glass-card rounded-2xl w-full max-w-3xl p-8 max-h-[90vh] overflow-y-auto relative">
+            <div class="flex justify-between items-start mb-6">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-lg bg-ifood-red/10 flex items-center justify-center text-ifood-red">
+                        <i class="fa-solid fa-house-medical"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold font-display">AVUS - Planos e Condições</h3>
+                        <span class="text-xs text-ifood-red font-semibold">Exclusivo para Colaboradores iFood</span>
+                    </div>
+                </div>
+                <button onclick="closeModal('modal-avus')" class="text-white/60 hover:text-white transition-colors">
+                    <i class="fa-solid fa-xmark text-xl"></i>
+                </button>
+            </div>
+            
+            <div class="space-y-6 text-sm text-white/80 leading-relaxed">
+                <!-- Tabela de Preços e Coberturas -->
+                <div class="overflow-hidden border border-white/10 rounded-xl">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-white/5 text-white font-semibold">
+                                <th class="p-3 border-b border-white/10">Produto</th>
+                                <th class="p-3 border-b border-white/10">Valor Mensal</th>
+                                <th class="p-3 border-b border-white/10">Elegibilidade</th>
+                                <th class="p-3 border-b border-white/10">Principais Benefícios</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-white/5 hover:bg-white/5">
+                                <td class="p-3 font-semibold text-white">Avus Família</td>
+                                <td class="p-3 text-ifood-red font-bold">R$ 29,90</td>
+                                <td class="p-3">Titular + até 3 dependentes</td>
+                                <td class="p-3">Telemedicina 24h, Seguro de vida (14 a 80 anos)</td>
+                            </tr>
+                            <tr class="hover:bg-white/5">
+                                <td class="p-3 font-semibold text-white">Avus Individual</td>
+                                <td class="p-3 text-ifood-red font-bold">R$ 19,90</td>
+                                <td class="p-3">Contratado via landing page exclusiva</td>
+                                <td class="p-3">Telemedicina 24h, Seguro de vida (14 a 80 anos)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Detalhes Operacionais -->
+                <div class="bg-white/5 p-4 rounded-xl space-y-2 text-xs text-ifood-muted border border-white/5">
+                    <p>• Telemedicina 24h com clínico geral possui <strong>4 consultas inclusas</strong>. Consultas adicionais saem por <strong>R$ 70,00</strong>.</p>
+                    <p>• Pagamento parcelado em até <strong>12x</strong>.</p>
+                    <p>• Cancelamento antecipado possui <strong>multa de 30%</strong> sobre o saldo restante.</p>
+                    <p>• Consulta à rede credenciada completa: <a href="https://lp.avus.com.br/guiamedico" target="_blank" class="text-ifood-red underline hover:text-white">lp.avus.com.br/guiamedico</a></p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="bg-emerald-500/10 p-4 rounded-xl border border-emerald-500/20">
+                        <h4 class="font-bold text-emerald-400 mb-1 flex items-center gap-1">
+                            <i class="fa-solid fa-circle-check"></i> Flexibilidade de Titularidade
+                        </h4>
+                        <p class="text-xs">O colaborador do iFood (Foodlover) <strong>não precisa ser um dos beneficiários</strong> do plano. É possível realizar a contratação exclusiva para pais e terceiros diretamente.</p>
+                    </div>
+                    <div class="bg-blue-500/10 p-4 rounded-xl border border-blue-500/20">
+                        <h4 class="font-bold text-blue-400 mb-1 flex items-center gap-1">
+                            <i class="fa-solid fa-user-gear"></i> Atualização Fácil
+                        </h4>
+                        <p class="text-xs">Permite a livre <strong>alteração dos beneficiários</strong> ativos após a contratação de forma digital, sem burocracias adicionais.</p>
+                    </div>
+                </div>
+
+                <div class="bg-ifood-red/10 text-center py-3 rounded-xl border border-ifood-red/30">
+                    <p class="text-xs font-semibold">Contratação via link exclusivo da parceria iFood durante o período de eleição.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL INFORMATIVO: STAY -->
+    <div id="modal-stay" class="fixed inset-0 z-50 hidden bg-ifood-dark/95 backdrop-blur-md flex items-center justify-center p-4">
+        <div class="glass-card rounded-2xl w-full max-w-4xl p-8 max-h-[90vh] overflow-y-auto relative border border-emerald-500/20">
+            <div class="flex justify-between items-start mb-6">
+                <div class="flex items-center gap-3">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-400">
+                        <i class="fa-solid fa-piggy-bank text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold font-display">Stay Previdência</h3>
+                        <span class="text-xs text-emerald-400 font-semibold">Plano por Adesão iSave & iFood (15 a 22/06)</span>
+                    </div>
+                </div>
+                <button onclick="closeModal('modal-stay')" class="text-white/60 hover:text-white transition-colors">
+                    <i class="fa-solid fa-xmark text-xl"></i>
+                </button>
+            </div>
+            
+            <div class="space-y-6 text-sm text-white/80 leading-relaxed">
+                <p class="text-white/90 text-base">
+                    A previdência da <strong>Stay/iSave</strong> é o benefício do futuro que engaja talentos e foca na saúde financeira. Uma solução por adesão com <strong>isenção de taxa de carregamento</strong>, oferecida aos Foodlovers com contratação 100% digital via WhatsApp durante a Eleição de Benefícios.
+                </p>
+
+                <!-- OBJETIVOS STRATEGIC -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 bg-emerald-950/10 border border-emerald-500/10 rounded-xl p-4">
+                    <div>
+                        <span class="text-xs font-mono text-emerald-400 uppercase font-bold block mb-1">AWARENESS</span>
+                        <p class="text-xs text-white/80">Fazer a Stay ser conhecida por todos os Foodlovers, despertando a cultura do cuidado do futuro.</p>
+                    </div>
+                    <div>
+                        <span class="text-xs font-mono text-emerald-400 uppercase font-bold block mb-1">VIRALIDADE</span>
+                        <p class="text-xs text-white/80">Criar momentos de conquista financeira pessoal que as pessoas querem compartilhar de forma síncrona.</p>
+                    </div>
+                </div>
+
+                <!-- JORNADA DO FOODLOVER EM TRÊS ETAPAS -->
+                <div>
+                    <h4 class="font-bold text-white mb-4 flex items-center gap-2 text-base">
+                        <i class="fa-solid fa-route text-emerald-400"></i> A Jornada do Foodlover
+                    </h4>
+                    
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+                        <!-- Etapa 1 -->
+                        <div class="bg-white/5 p-4 rounded-xl border border-white/5">
+                            <span class="text-emerald-400 font-black text-2xl block mb-1">01</span>
+                            <h5 class="font-bold text-white mb-2">Sonhar</h5>
+                            <p class="text-xs text-ifood-muted mb-3 leading-relaxed">Despertar a emoção e a ligação profunda com os objetivos de longo prazo.</p>
+                            <div class="border-t border-white/10 pt-2 text-xs">
+                                <span class="text-emerald-400 font-bold block">Consultoria Express:</span>
+                                Atendimento individual de 15 minutos com consultores financeiros Stay (Presencial ou agendamento online).
+                            </div>
+                        </div>
+
+                        <!-- Etapa 2 -->
+                        <div class="bg-white/5 p-4 rounded-xl border border-white/5">
+                            <span class="text-emerald-400 font-black text-2xl block mb-1">02</span>
+                            <h5 class="font-bold text-white mb-2">Entender</h5>
+                            <p class="text-xs text-ifood-muted mb-3 leading-relaxed">Transformar o sonho em números reais e palpáveis na tela.</p>
+                            <div class="border-t border-white/10 pt-2 text-xs">
+                                <span class="text-emerald-400 font-bold block">Simulador de Sonhos:</span>
+                                Calculadora interativa de 5 passos para descobrir o aporte mensal necessário (ex: guardar R$ 547/mês por 5 anos com juros de 10% a.a.).
+                            </div>
+                        </div>
+
+                        <!-- Etapa 3 -->
+                        <div class="bg-white/5 p-4 rounded-xl border border-white/5">
+                            <span class="text-emerald-400 font-black text-2xl block mb-1">03</span>
+                            <h5 class="font-bold text-white mb-2">Agir</h5>
+                            <p class="text-xs text-ifood-muted mb-3 leading-relaxed">A recompensa imediata para a tomada de decisão em previdência.</p>
+                            <div class="border-t border-white/10 pt-2 text-xs font-semibold text-emerald-400">
+                                Cashback de adesão de 10% + Cashback por indicações bem-sucedidas.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARACTERÍSTICAS TÉCNICAS E REGRAS -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="font-bold text-white mb-2 flex items-center gap-2"><i class="fa-solid fa-sliders text-emerald-400"></i> Como Funciona</h4>
+                        <ul class="space-y-2 text-xs">
+                            <li><strong>Modelo:</strong> Por adesão individual (não obrigatório).</li>
+                            <li><strong>Praticidade:</strong> 100% digital via WhatsApp de forma simplificada e sem burocracias.</li>
+                            <li><strong>Tipos de Plano:</strong> Escolha livre entre <strong>VGBL</strong> ou <strong>PGBL</strong>.</li>
+                            <li><strong>Contribuição Mínima:</strong> Apenas R$ 1,00.</li>
+                            <li><strong>Flexibilidade:</strong> Pode alterar, pausar ou retomar a qualquer momento via aplicação.</li>
+                            <li><strong>Forma de Pagamento:</strong> Boleto com vencimento todo dia 20 (sem juros em caso de atraso).</li>
+                            <li><strong>Fundos:</strong> Lista de fundos qualificados e selecionados pelo iFood.</li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-bold text-white mb-2 flex items-center gap-2"><i class="fa-solid fa-gift text-emerald-400"></i> Benefícios & Cashback Stay</h4>
+                        <ul class="space-y-2 text-xs">
+                            <li><strong>10% de Cashback</strong> na primeira aplicação para todos os Foodlovers.</li>
+                            <li><strong>+5% de Cashback</strong> ao indicar novos Foodlovers (calculado sobre o aporte do mês vigente da indicação, limitado a até 4 indicações por mês).</li>
+                            <li><strong>Regra de Indicação:</strong> O indicado deve abrir a conta e aplicar no mínimo R$ 100,00.</li>
+                            <li><strong>Limitação:</strong> Cashback limitado a aplicações mensais de até R$ 3.000,00.</li>
+                            <li><strong>Validade da Promoção:</strong> Até dezembro de 2026.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- PASSO A PASSO DA CONTRATAÇÃO -->
+                <div class="bg-white/5 p-4 rounded-xl border border-white/5">
+                    <h4 class="font-bold text-white mb-2 text-xs flex items-center gap-1.5"><i class="fa-solid fa-circle-info text-emerald-400"></i> Passo a Passo da Contratação</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-4 text-xs">
+                        <div class="p-3 bg-white/5 rounded-lg">
+                            <span class="font-bold text-emerald-400 block mb-1">Passo 1</span>
+                            Aceitar o convite oficial enviado pela empresa por e-mail ou Slack.
+                        </div>
+                        <div class="p-3 bg-white/5 rounded-lg">
+                            <span class="font-bold text-emerald-400 block mb-1">Passo 2</span>
+                            Validar a identidade via WhatsApp de forma segura e rápida.
+                        </div>
+                        <div class="p-3 bg-white/5 rounded-lg">
+                            <span class="font-bold text-emerald-400 block mb-1">Passo 3</span>
+                            Editar dados e definir valor de contribuição, VGBL/PGBL e fundo.
+                        </div>
+                        <div class="p-3 bg-white/5 rounded-lg">
+                            <span class="font-bold text-emerald-400 block mb-1">Passo 4</span>
+                            Assinar eletronicamente o termo de adesão instantâneo.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GESTÃO DO PLANO E DADOS -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+                    <div class="bg-white/5 p-4 rounded-xl border border-white/5">
+                        <h5 class="font-bold text-white mb-2">Gestão Completa via WhatsApp/App:</h5>
+                        <ul class="space-y-1.5 text-ifood-muted">
+                            <li>• <span class="text-white">Consultar saldos</span> e rentabilidade em tempo real.</li>
+                            <li>• <span class="text-white">Alterar ou pausar</span> as contribuições mensais voluntárias.</li>
+                            <li>• <span class="text-white">Solicitar resgates</span> de forma digital (carência mínima de 60 dias).</li>
+                            <li>• <span class="text-white">Acompanhar a evolução</span> da sua calculadora de objetivos de sonhos.</li>
+                            <li>• <span class="text-white">Contar com suporte</span> especializado do time Stay.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white/5 p-4 rounded-xl border border-white/5">
+                        <h5 class="font-bold text-white mb-2">Campos Cadastrais Pré-preenchidos:</h5>
+                        <div class="space-y-1">
+                            <p><strong>Obrigatórios:</strong> CPF, Nome Completo, Celular, E-mail Profissional.</p>
+                            <p><strong>Importante:</strong> E-mail Pessoal.</p>
+                            <p><strong>Desejáveis:</strong> Data de Admissão, Salário Base e Endereço Completo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL INFORMATIVO: PET TELEMEDICINA -->
+    <div id="modal-pet-telemed" class="fixed inset-0 z-50 hidden bg-ifood-dark/95 backdrop-blur-md flex items-center justify-center p-4">
+        <div class="glass-card rounded-2xl w-full max-w-3xl p-8 max-h-[90vh] overflow-y-auto relative">
+            <div class="flex justify-between items-start mb-6">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-lg bg-cyan-500/10 flex items-center justify-center text-cyan-400">
+                        <i class="fa-solid fa-paw"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold font-display">Telemedicina Pets & Onboarding</h3>
+                        <span class="text-xs text-cyan-400 font-semibold">Meu Pet Club</span>
+                    </div>
+                </div>
+                <button onclick="closeModal('modal-pet-telemed')" class="text-white/60 hover:text-white transition-colors">
+                    <i class="fa-solid fa-xmark text-xl"></i>
+                </button>
+            </div>
+            
+            <div class="space-y-6 text-sm text-white/80 leading-relaxed">
+                <!-- Vantagem Central -->
+                <div class="bg-cyan-950/20 p-5 rounded-xl border border-cyan-500/20 text-xs">
+                    <h4 class="font-bold text-cyan-400 text-sm mb-2">Acesso Universal do Foodlover</h4>
+                    <p class="leading-relaxed">Consultas veterinárias <strong>online e gratuitas para todos os cães e gatos</strong> de todos os colaboradores iFood. O benefício é estendido de forma <strong>gratuita e ilimitada</strong> mesmo para quem não contratou plano de saúde Pet padrão no beneflex.</p>
+                </div>
+
+                <!-- Onboarding & Suporte Segment -->
+                <div>
+                    <h4 class="font-bold text-white mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-route text-cyan-400"></i> Jornada de Onboarding e Suporte
+                    </h4>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-white/5 p-4 rounded-xl border border-white/5">
+                            <h5 class="font-bold text-white mb-1 flex items-center gap-1.5">
+                                <span class="w-2 h-2 rounded-full bg-cyan-400"></span> Início do Processo
+                            </h5>
+                            <p class="text-xs text-ifood-muted">O onboarding ocorre sempre no <strong>1º dia útil do mês subsequente</strong> ao envio da base de dados oficiais pela equipa de Pessoas do iFood.</p>
+                        </div>
+
+                        <div class="bg-white/5 p-4 rounded-xl border border-white/5">
+                            <h5 class="font-bold text-white mb-1 flex items-center gap-1.5">
+                                <span class="w-2 h-2 rounded-full bg-cyan-400"></span> Comunicação Direta
+                            </h5>
+                            <p class="text-xs text-ifood-muted">O colaborador recebe um <strong>e-mail transacional</strong> com orientações para reset de senha e passo a passo detalhado de cadastro de seus animais.</p>
+                        </div>
+
+                        <div class="bg-white/5 p-4 rounded-xl border border-white/5">
+                            <h5 class="font-bold text-white mb-1 flex items-center gap-1.5">
+                                <span class="w-2 h-2 rounded-full bg-cyan-400"></span> Suporte Centralizado
+                            </h5>
+                            <p class="text-xs text-ifood-muted">Dúvidas gerais, e-mails incorretos ou falhas operacionais de login serão tratados <strong>exclusivamente pelo canal de suporte especializado da Meu Pet</strong>.</p>
+                        </div>
+
+                        <div class="bg-white/5 p-4 rounded-xl border border-white/5">
+                            <h5 class="font-bold text-white mb-1 flex items-center gap-1.5">
+                                <span class="w-2 h-2 rounded-full bg-cyan-400"></span> Materiais de Apoio
+                            </h5>
+                            <p class="text-xs text-ifood-muted">A operadora Meu Pet enviará um <strong>vídeo tutorial didático</strong> do onboarding, acompanhado do modelo oficial da planilha de cadastro de beneficiários.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL INFORMATIVO: MEU PET VIA CRÉDITO -->
+    <div id="modal-pet-credito" class="fixed inset-0 z-50 hidden bg-ifood-dark/95 backdrop-blur-md flex items-center justify-center p-4">
+        <div class="glass-card rounded-2xl w-full max-w-2xl p-8 max-h-[90vh] overflow-y-auto relative border border-amber-500/20">
+            <div class="flex justify-between items-start mb-6">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-lg bg-amber-500/10 flex items-center justify-center text-amber-400">
+                        <i class="fa-solid fa-credit-card"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold font-display">Meu Pet via Crédito</h3>
+                </div>
+                <button onclick="closeModal('modal-pet-credito')" class="text-white/60 hover:text-white transition-colors">
+                    <i class="fa-solid fa-xmark text-xl"></i>
+                </button>
+            </div>
+            <div class="space-y-4 text-sm text-white/80 leading-relaxed">
+                <p>Visando desburocratizar a contratação e dar maior autonomia ao Foodlover, inovamos no fluxo de contratação do Meu Pet Club.</p>
+                
+                <div class="bg-white/5 p-4 rounded-xl space-y-3 border border-white/5 text-xs">
+                    <h4 class="font-bold text-white text-sm">Estrutura de Lançamento e Condições:</h4>
+                    <ul class="list-disc list-inside space-y-2 text-ifood-muted">
+                        <li>
+                            <strong class="text-white">Lançamento Direto:</strong> 
+                            Desconto recorrente cobrado de forma automática e direta no cartão de crédito de preferência cadastrado pelo Foodlover.
+                        </li>
+                        <li>
+                            <strong class="text-white">Valores Diferenciados de Mercado:</strong> 
+                            Condições comerciais exclusivas do iFood, garantindo planos com tabelas muito abaixo das taxas normais praticadas no mercado livre.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL INFORMATIVO: AGENTE BENÍCIO -->
+    <div id="modal-benicio" class="fixed inset-0 z-50 hidden bg-ifood-dark/95 backdrop-blur-md flex items-center justify-center p-4">
+        <div class="glass-card rounded-2xl w-full max-w-2xl p-8 max-h-[90vh] overflow-y-auto relative">
+            <div class="flex justify-between items-start mb-6">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center text-purple-400">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold font-display">Agente Benício</h3>
+                </div>
+                <button onclick="closeModal('modal-benicio')" class="text-white/60 hover:text-white transition-colors">
+                    <i class="fa-solid fa-xmark text-xl"></i>
+                </button>
+            </div>
+            <div class="space-y-4 text-sm text-white/80 leading-relaxed">
+                <p>O <strong>Agente Benício</strong> foi construído utilizando os melhores modelos de IA de linguagem natural para resolver uma das principais dores da eleição geral: o excesso de opções complexas.</p>
+                <div class="bg-white/5 p-4 rounded-xl space-y-2 border border-white/5 text-xs">
+                    <h4 class="font-bold text-white text-sm">Atuação da IA no Processo:</h4>
+                    <ul class="list-disc list-inside space-y-1 text-ifood-muted">
+                        <li><strong class="text-white">Entendimento do Momento de Vida:</strong> Através de conversas naturais, o Benício entende as necessidades de dependentes, saúde, cuidados com pets e objetivos financeiros.</li>
+                        <li><strong class="text-white">Recomendação Personalizada:</strong> Recomenda o pacote de benefícios mais indicado de forma totalmente consultiva.</li>
+                        <li><strong class="text-white">Esclarecimento Imediato:</strong> Tira dúvidas de carências e regras do portfólio 2026 de forma instantânea.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPTS DE INTERATIVIDADE -->
+    <script>
+        // Gestão de Modais
+        function openModal(id) {
+            const modal = document.getElementById(id);
+            if (modal) {
+                modal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden'; // Previne o scroll do fundo
+            }
+        }
+
+        function closeModal(id) {
+            const modal = document.getElementById(id);
+            if (modal) {
+                modal.classList.add('hidden');
+                document.body.style.overflow = ''; // Reativa o scroll geral
+            }
+        }
+
+        // Fechar modais ao clicar na área exterior do conteúdo
+        window.addEventListener('click', function(e) {
+            const modals = ['modal-avus', 'modal-stay', 'modal-pet-telemed', 'modal-pet-credito', 'modal-benicio'];
+            modals.forEach(id => {
+                const modal = document.getElementById(id);
+                if (e.target === modal) {
+                    closeModal(id);
+                }
+            });
+        });
+
+        // Controlo Dinâmico do Mapa das Arenas (Foco em Stand)
+        function focusStand(arena) {
+            const display = document.getElementById('arena-info-display');
+            let info = '';
+
+            if (arena === 'green-arena') {
+                info = `
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-2">
+                            <span class="w-3 h-3 rounded-full bg-green-500"></span>
+                            <h4 class="text-sm font-mono font-bold uppercase text-white">Arena Saúde & Bem-Estar</h4>
+                        </div>
+                        <p class="text-xs text-white/80 leading-relaxed">Focada no bem-estar físico e preventivo dos Foodlovers.</p>
+                        <div class="text-xs space-y-2 bg-white/5 p-3 rounded-xl border border-white/5">
+                            <p><strong>Wellhub:</strong> Sorteio de Smartwatch e Câmera IA.</p>
+                            <p><strong>AVUS:</strong> Quiz de Saúde para concorrer ao iPhone.</p>
+                            <p><strong>Vidalink:</strong> Jogo presencial com receita / Sorteio de Instax Mini online.</p>
+                            <p><strong>Bradesco Saúde:</strong> Cabine física de checkup preventivo rápido.</p>
+                            <p><strong>Bradesco Odonto:</strong> Cabine fotográfica com recordações do seu sorriso.</p>
+                            <p><strong>Meu Pet Club:</strong> Distribuição de roupinhas/bandanas de Copa e chaveiros.</p>
+                            <p><strong>iDoc / Mar Saúde / eyeCare:</strong> Coleta de exames e saúde para os olhos.</p>
+                        </div>
+                        <a href="#green-arena-list" class="block text-center py-2 bg-green-500 hover:bg-green-600 text-white rounded-lg text-xs font-bold transition-colors">Ir para os detalhes</a>
+                    </div>
+                `;
+            } else if (arena === 'blue-arena') {
+                info = `
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-2">
+                            <span class="w-3 h-3 rounded-full bg-blue-500"></span>
+                            <h4 class="text-sm font-mono font-bold uppercase text-white">Arena Suporte Integral</h4>
+                        </div>
+                        <p class="text-xs text-white/80 leading-relaxed">Foco em futuro financeiro, conformidade jurídica e apoio familiar.</p>
+                        <div class="text-xs space-y-2 bg-white/5 p-3 rounded-xl border border-white/5">
+                            <p><strong>Stay Previdência:</strong> Cashback de 10% de adesão no Simulador de Sonhos.</p>
+                            <p><strong>Leggal:</strong> Quiz de necessidade jurídica valendo Cafeteira Nespresso.</p>
+                            <p><strong>New Value:</strong> Degustação física e sorteio de camiseta oficial da Copa.</p>
+                            <p><strong>Lockton:</strong> Apoio com eleição assistida e dúvidas operacionais gerais.</p>
+                            <p><strong>Sesc:</strong> Proposta a ser enviada no dia 09/06.</p>
+                        </div>
+                        <a href="#blue-arena-list" class="block text-center py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg text-xs font-bold transition-colors">Ir para os detalhes</a>
+                    </div>
+                `;
+            } else if (arena === 'red-arena') {
+                info = `
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-2">
+                            <span class="w-3 h-3 rounded-full bg-red-500"></span>
+                            <h4 class="text-sm font-mono font-bold uppercase text-white">Arena iFood Benefícios</h4>
+                        </div>
+                        <p class="text-xs text-white/80 leading-relaxed">Nossa grande arena com a temática da Copa do Mundo.</p>
+                        <div class="text-xs space-y-2 bg-white/5 p-3 rounded-xl border border-white/5">
+                            <p><strong>iFood Benefícios / Decolar / Vale Bônus:</strong> Arena unificada explicando vantagens, cupons e o cartão.</p>
+                            <p><strong>Dinâmica Chute a Gol:</strong> Acerte o gol na quadra e concorra a duas camisas oficiais da Seleção Brasileira via Centauro.</p>
+                            <p><strong>Virtual:</strong> Detalhes da modalidade online sendo desenhados com os parceiros.</p>
+                        </div>
+                        <a href="#red-arena-list" class="block text-center py-2 bg-red-500 hover:bg-red-600 text-white rounded-lg text-xs font-bold transition-colors">Ir para os detalhes</a>
+                    </div>
+                `;
+            }
+
+            display.innerHTML = info;
+        }
+    </script>
+</body>
+</html>
