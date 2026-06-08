@@ -59,9 +59,6 @@
             backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.08);
         }
-        .arena-saude { border-color: rgba(34, 197, 94, 0.3); }
-        .arena-suporte { border-color: rgba(59, 130, 246, 0.3); }
-        .arena-ifood { border-color: rgba(234, 29, 44, 0.3); }
     </style>
 </head>
 <body class="bg-ifood-dark text-white font-sans antialiased overflow-x-hidden">
@@ -74,11 +71,10 @@
         </div>
         <nav class="hidden lg:flex items-center gap-6 text-sm font-semibold text-white/75">
             <a href="#parceiros" class="hover:text-ifood-red transition-colors">Novos Parceiros</a>
-            <a href="#melhorias" class="hover:text-ifood-red transition-colors">Melhorias & IA</a>
+            <a href="#melhorias" class="hover:text-ifood-red transition-colors">Melhorias</a>
             <a href="#consolidacao" class="hover:text-ifood-red transition-colors">Consolidação</a>
-            <a href="#feira" class="hover:text-ifood-red transition-colors">Feira de Arenas</a>
+            <a href="#feira" class="hover:text-ifood-red transition-colors">Feira 2026</a>
             <a href="#governanca" class="hover:text-ifood-red transition-colors">Governança</a>
-            <a href="#apoio" class="hover:text-ifood-red transition-colors">Apoios</a>
             <a href="#cronograma" class="hover:text-ifood-red transition-colors">Cronograma</a>
         </nav>
         <div>
@@ -166,10 +162,14 @@
                 </button>
             </div>
 
-            <!-- Card 3: TELEMEDICINA PET -->
-            <div class="glass-card rounded-2xl p-8 flex flex-col justify-between hover:border-ifood-red/30 transition-all duration-300 relative group overflow-hidden">
-                <div class="absolute top-0 right-0 w-24 h-24 bg-ifood-red/5 rounded-bl-full pointer-events-none group-hover:bg-ifood-red/10 transition-all"></div>
-                <div>
+            <!-- Card 3: TELEMEDICINA PET (Em Avaliação) -->
+            <div class="glass-card rounded-2xl p-8 flex flex-col justify-between hover:border-amber-500/30 transition-all duration-300 relative group overflow-hidden">
+                <div class="absolute top-0 right-0 w-24 h-24 bg-amber-500/5 rounded-bl-full pointer-events-none"></div>
+                <!-- Faixa visual / Alerta de Avaliação -->
+                <div class="absolute inset-x-0 top-1/2 -translate-y-1/2 bg-amber-500/15 border-y border-amber-500/30 py-2 text-center rotate-[-12deg] z-10 pointer-events-none shadow-lg backdrop-blur-[2px]">
+                    <span class="text-xs font-extrabold tracking-widest text-amber-400 uppercase font-mono"><i class="fa-solid fa-circle-info mr-1"></i> EM AVALIAÇÃO <i class="fa-solid fa-circle-info ml-1"></i></span>
+                </div>
+                <div class="opacity-60 group-hover:opacity-100 transition-opacity">
                     <div class="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center text-cyan-400 mb-6">
                         <i class="fa-solid fa-paw text-2xl"></i>
                     </div>
@@ -179,7 +179,7 @@
                         Consultas veterinárias online, gratuitas e ilimitadas para cães e gatos de todos os Foodlovers. Entenda a jornada de onboarding e suporte centralizado.
                     </p>
                 </div>
-                <button onclick="openModal('modal-pet-telemed')" class="w-full py-3 bg-white/5 hover:bg-ifood-red hover:text-white text-white rounded-xl text-sm font-bold transition-all flex items-center justify-center gap-2">
+                <button onclick="openModal('modal-pet-telemed')" class="w-full py-3 bg-white/5 hover:bg-ifood-red hover:text-white text-white rounded-xl text-sm font-bold transition-all flex items-center justify-center gap-2 z-20">
                     Ver detalhes completos <i class="fa-solid fa-arrow-right text-xs"></i>
                 </button>
             </div>
@@ -194,7 +194,7 @@
                     <span class="text-xs font-mono text-amber-400 uppercase tracking-wider block mb-1">Autonomia de Pagamento</span>
                     <h3 class="text-2xl font-bold mb-3 font-display">Meu Pet via Crédito</h3>
                     <p class="text-sm text-white/70 leading-relaxed mb-6">
-                        Nova modalidade facilitada de contratação dos planos Meu Pet Club diretamente no cartão de crédito do Foodlover, dando flexibilidade fora da folha.
+                        Nova modalidade facilitada de contratação dos planos Meu Pet Club diretamente no cartão de crédito do Foodlover, com valores diferenciados de mercado.
                     </p>
                 </div>
                 <button onclick="openModal('modal-pet-credito')" class="w-full py-3 bg-white/5 hover:bg-ifood-red hover:text-white text-white rounded-xl text-sm font-bold transition-all flex items-center justify-center gap-2">
@@ -202,32 +202,49 @@
                 </button>
             </div>
 
-            <!-- Card 5: AGENTE BENÍCIO -->
-            <div class="glass-card rounded-2xl p-8 flex flex-col justify-between hover:border-ifood-red/30 transition-all duration-300 relative group overflow-hidden lg:col-span-2">
-                <div class="absolute top-0 right-0 w-48 h-48 bg-ifood-red/5 rounded-bl-full pointer-events-none group-hover:bg-ifood-red/10 transition-all"></div>
+            <!-- Card 5: NOVO DECOLAR (Em Avaliação) -->
+            <div class="glass-card rounded-2xl p-8 flex flex-col justify-between hover:border-ifood-red/30 transition-all duration-300 relative group overflow-hidden">
+                <div class="absolute top-0 right-0 w-24 h-24 bg-ifood-red/5 rounded-bl-full pointer-events-none group-hover:bg-ifood-red/10 transition-all"></div>
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400 mb-6">
+                        <i class="fa-solid fa-plane-departure text-2xl"></i>
+                    </div>
+                    <span class="text-xs font-mono text-blue-400 uppercase tracking-wider block mb-1">Parceria Viagens</span>
+                    <h3 class="text-2xl font-bold mb-3 font-display">Novo Decolar</h3>
+                    <p class="text-sm text-white/70 leading-relaxed mb-6">
+                        Integração do ecossistema de viagens e lazer corporativo. <span class="text-amber-400 font-semibold">Observação importante: Em avaliação.</span>
+                    </p>
+                </div>
+                <button onclick="openModal('modal-decolar')" class="w-full py-3 bg-white/5 hover:bg-ifood-red hover:text-white text-white rounded-xl text-sm font-bold transition-all flex items-center justify-center gap-2">
+                    Ver detalhes completos <i class="fa-solid fa-arrow-right text-xs"></i>
+                </button>
+            </div>
+
+            <!-- Card 6: AGENTE BENÍCIO -->
+            <div class="glass-card rounded-2xl p-8 flex flex-col justify-between hover:border-ifood-red/30 transition-all duration-300 relative group overflow-hidden">
+                <div class="absolute top-0 right-0 w-24 h-24 bg-ifood-red/5 rounded-bl-full pointer-events-none group-hover:bg-ifood-red/10 transition-all"></div>
                 <div>
                     <div class="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-400 mb-6">
                         <i class="fa-solid fa-robot text-2xl"></i>
                     </div>
                     <span class="text-xs font-mono text-purple-400 uppercase tracking-wider block mb-1">Inteligência Artificial Co-Pilot</span>
-                    <h3 class="text-3xl font-bold mb-3 font-display">Agente Benício</h3>
-                    <p class="text-base text-white/75 leading-relaxed mb-6">
+                    <h3 class="text-2xl font-bold mb-3 font-display">Agente Benício</h3>
+                    <p class="text-sm text-white/70 leading-relaxed mb-6">
                         O novo consultor virtual baseado em Inteligência Artificial Generativa que guiará cada Foodlover durante o processo de escolha, analisando o momento de vida de forma personalizada e livre de atritos.
                     </p>
                 </div>
-                <button onclick="openModal('modal-benicio')" class="w-fit px-8 py-3 bg-white/5 hover:bg-ifood-red hover:text-white text-white rounded-xl text-sm font-bold transition-all flex items-center gap-2">
-                    Explorar IA de Atendimento <i class="fa-solid fa-arrow-right text-xs"></i>
+                <button onclick="openModal('modal-benicio')" class="w-full py-3 bg-white/5 hover:bg-ifood-red hover:text-white text-white rounded-xl text-sm font-bold transition-all flex items-center justify-center gap-2">
+                    Ver detalhes completos <i class="fa-solid fa-arrow-right text-xs"></i>
                 </button>
             </div>
 
         </div>
     </section>
 
-    <!-- SECÇÃO 2: EVOLUÇÕES & MELHORIAS -->
+    <!-- SECÇÃO 2: MELHORIAS -->
     <section id="melhorias" class="py-24 bg-ifood-grayDark/50 border-t border-b border-white/5 relative">
         <div class="max-w-7xl mx-auto px-6 md:px-12">
-            <span class="text-ifood-red font-bold text-xs uppercase tracking-widest block mb-2">// O QUE ESTÁ A EVOLUIR</span>
-            <h2 class="text-3xl md:text-5xl font-black font-display mb-12">Melhorias & Recursos Futuros</h2>
+            <h2 class="text-3xl md:text-5xl font-black font-display mb-12">Melhorias</h2>
 
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 
@@ -324,14 +341,14 @@
                             <div class="text-2xl text-ifood-muted mt-1"><i class="fa-solid fa-language"></i></div>
                             <div>
                                 <h4 class="font-bold">Idiomas Complementar</h4>
-                                <p class="text-sm text-ifood-muted">Descontinuado. A alternativa integrada de investimentos em idiomas passa a ser gerida via carteira flexível na <strong>Carteira Flex</strong>.</p>
+                                <p class="text-sm text-ifood-muted">Descontinuado. A alternativa integrada de investimentos in-company de idiomas passa a ser gerida de forma autónoma via Carteira Flex.</p>
                             </div>
                         </div>
                         <div class="flex items-start gap-4">
                             <div class="text-2xl text-ifood-muted mt-1"><i class="fa-solid fa-plane-departure"></i></div>
                             <div>
                                 <h4 class="font-bold">Plano de Viagens (Travel Cash)</h4>
-                                <p class="text-sm text-ifood-muted">Descontinuado em definitivo do portefólio oficial de benefícios eletivos do iFood.</p>
+                                <p class="text-sm text-ifood-muted">Descontinuado em definitivo do portfólio oficial de benefícios eletivos do iFood.</p>
                             </div>
                         </div>
                         <div class="flex items-start gap-4">
@@ -396,7 +413,7 @@
                     <span class="w-3 h-3 rounded-full bg-blue-500"></span>
                     <span class="w-3 h-3 rounded-full bg-red-500"></span>
                 </div>
-                <h3 class="text-lg font-mono font-bold uppercase tracking-widest text-ifood-muted mb-6"><i class="fa-solid fa-map-location-dot mr-2 text-ifood-red"></i> MAPA INTERATIVO DA QUADRA: EDICAO 2026</h3>
+                <h3 class="text-lg font-mono font-bold uppercase tracking-widest text-ifood-muted mb-6"><i class="fa-solid fa-map-location-dot mr-2 text-ifood-red"></i> MAPA INTERATIVO DA QUADRA (EDICAO 2026 - INSPIRADO EM image_330980.png)</h3>
                 
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
                     <!-- Mapa das Arenas (8 cols) -->
@@ -468,7 +485,7 @@
                                 <h4 class="font-bold text-white text-lg">AVUS</h4>
                                 <p class="text-xs text-ifood-muted mt-1">Sorteio de iPhone!</p>
                                 <p class="text-xs text-white/80 mt-3 leading-relaxed">
-                                    <strong>Elegibilidade para Sorteio:</strong> O Foodlover (tanto presencial como na feira virtual) deve responder integralmente ao Quiz de Saúde da AVUS.
+                                    <strong>Elegibilidade para Sorteio:</strong> O Foodlover (tanto presencial como na feira virtual) deve responder ao Quiz de Saúde da AVUS.
                                 </p>
                             </div>
                             <div class="border-t border-white/5 pt-4 mt-4 text-xs font-mono text-green-400">Ativação On-site: Saúde Quiz</div>
@@ -563,7 +580,7 @@
                                 <h4 class="font-bold text-white text-lg">Leggal</h4>
                                 <p class="text-xs text-ifood-muted mt-1">Sorteio de Cafeteira Nespresso!</p>
                                 <p class="text-xs text-white/80 mt-3 leading-relaxed">
-                                    <strong>Elegibilidade para Sorteio:</strong> Aberto para todos os que responderem de forma completa ao Quiz de Necessidade Jurídica no stand ou plataforma virtual.
+                                    <strong>Elegibilidade para Sorteio:</strong> Aberto para todos os que responderem ao Quiz de Necessidade Jurídica no stand ou plataforma virtual.
                                 </p>
                             </div>
                             <div class="border-t border-white/5 pt-4 mt-4 text-xs font-mono text-blue-400">Ativação On-site: Quiz Legal</div>
@@ -795,20 +812,20 @@
 
             <!-- Item 2 -->
             <div class="relative">
-                <div class="absolute -left-[41px] top-1 w-6 h-6 rounded-full bg-ifood-red border-4 border-ifood-dark"></div>
+                <div class="absolute -left-[41px] top-1 w-6 h-6 rounded-full bg-white/30 border-4 border-ifood-dark flex items-center justify-center text-[10px] text-white/50"></div>
                 <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
                     <div>
-                        <span class="text-xs font-mono font-bold text-ifood-red">08/06</span>
-                        <h4 class="text-xl font-bold font-display text-white">Impacto: Planos Meu Pet & Travel Cash</h4>
-                        <p class="text-sm text-ifood-muted max-w-2xl">Disparos focados para informar sobre o encerramento do convênio de viagens Travel Cash e a readequação dos planos Pet Emergencial / Pet Sênior.</p>
+                        <span class="text-xs font-mono font-bold text-ifood-muted">08/06</span>
+                        <h4 class="text-xl font-bold font-display text-white">Impacto: Planos Meu Pet Sênior e Emergencial</h4>
+                        <p class="text-sm text-ifood-muted max-w-2xl">Disparo focado para informar sobre o encerramento do plano Pet Emergencial e o upgrade automático do plano de boa Sênior no Beneflex.</p>
                     </div>
-                    <span class="self-start md:self-center bg-white/5 border border-white/10 px-3 py-1 rounded text-xs font-mono uppercase text-ifood-red">Segmentado / Broadcast</span>
+                    <span class="self-start md:self-center bg-white/5 border border-white/10 px-3 py-1 rounded text-xs font-mono uppercase text-ifood-muted">Segmentado / Broadcast</span>
                 </div>
             </div>
 
             <!-- Item 3 -->
             <div class="relative">
-                <div class="absolute -left-[41px] top-1 w-6 h-6 rounded-full bg-white/30 border-4 border-ifood-dark"></div>
+                <div class="absolute -left-[41px] top-1 w-6 h-6 rounded-full bg-white/30 border-4 border-ifood-dark flex items-center justify-center text-[10px] text-white/50"></div>
                 <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
                     <div>
                         <span class="text-xs font-mono font-bold text-ifood-muted">09/06</span>
@@ -821,33 +838,46 @@
 
             <!-- Item 4 -->
             <div class="relative">
-                <div class="absolute -left-[41px] top-1 w-6 h-6 rounded-full bg-white/30 border-4 border-ifood-dark"></div>
+                <div class="absolute -left-[41px] top-1 w-6 h-6 rounded-full bg-white/30 border-4 border-ifood-dark flex items-center justify-center text-[10px] text-white/50"></div>
                 <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
                     <div>
                         <span class="text-xs font-mono font-bold text-ifood-muted">09/06</span>
                         <h4 class="text-xl font-bold font-display text-white">People Todos (Comunicação Geral)</h4>
                         <p class="text-sm text-ifood-muted max-w-2xl">Disparo abrangente da equipa de People alinhando a importância e engajamento para a próxima eleição.</p>
                     </div>
-                    <span class="self-start md:self-center bg-white/5 border border-white/10 px-3 py-1 rounded text-xs font-mono uppercase text-ifood-muted">Pessoas / Newsletter</span>
+                    <span class="self-start md:self-center bg-white/5 border border-white/10 px-3 py-1 rounded text-xs font-mono uppercase text-ifood-muted">People / Geral</span>
                 </div>
             </div>
 
             <!-- Item 5 -->
             <div class="relative">
-                <div class="absolute -left-[41px] top-1 w-6 h-6 rounded-full bg-ifood-red border-4 border-ifood-dark"></div>
+                <div class="absolute -left-[41px] top-1 w-6 h-6 rounded-full bg-white/30 border-4 border-ifood-dark flex items-center justify-center text-[10px] text-white/50"></div>
                 <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
                     <div>
-                        <span class="text-xs font-mono font-bold text-ifood-red">10/06</span>
-                        <h4 class="text-xl font-bold font-display text-white">Transição: Idiomas Complementar & Carteira Flex</h4>
-                        <p class="text-sm text-ifood-muted max-w-2xl">Broadcast explicativo sobre a evolução do Reembolso Flex para Carteira Flex e o encerramento do saldo de idiomas.</p>
+                        <span class="text-xs font-mono font-bold text-ifood-muted">10/06</span>
+                        <h4 class="text-xl font-bold font-display text-white">Transição: Idiomas Complementar & Reembolso Flex</h4>
+                        <p class="text-sm text-ifood-muted max-w-2xl">Broadcast explicativo sobre a evolução do Reembolso Flex para Carteira Flex e o encerramento do saldo de idiomas (zeramento em 11/07 e pagamento em 30/07).</p>
                     </div>
-                    <span class="self-start md:self-center bg-white/5 border border-white/10 px-3 py-1 rounded text-xs font-mono uppercase text-ifood-red">Connect Broadcast</span>
+                    <span class="self-start md:self-center bg-white/5 border border-white/10 px-3 py-1 rounded text-xs font-mono uppercase text-ifood-muted">Connect Broadcast</span>
                 </div>
             </div>
 
-            <!-- Item 6 -->
+            <!-- Item 6 (Travel Cash movido para 10/06) -->
             <div class="relative">
-                <div class="absolute -left-[41px] top-1 w-6 h-6 rounded-full bg-white/30 border-4 border-ifood-dark"></div>
+                <div class="absolute -left-[41px] top-1 w-6 h-6 rounded-full bg-ifood-red border-4 border-ifood-dark flex items-center justify-center text-[10px] text-white/50"></div>
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                    <div>
+                        <span class="text-xs font-mono font-bold text-ifood-red">10/06 — ATUALIZADO</span>
+                        <h4 class="text-xl font-bold font-display text-white">Cancelamento: Plano de Viagens (Travel Cash)</h4>
+                        <p class="text-sm text-ifood-muted max-w-2xl">Broadcast oficial direcionado aos Foodlovers informando formalmente sobre a descontinuação e o encerramento do plano de viagens.</p>
+                    </div>
+                    <span class="self-start md:self-center bg-white/5 border border-white/10 px-3 py-1 rounded text-xs font-mono uppercase text-ifood-red">Segmentado / Broadcast</span>
+                </div>
+            </div>
+
+            <!-- Item 7 -->
+            <div class="relative">
+                <div class="absolute -left-[41px] top-1 w-6 h-6 rounded-full bg-white/30 border-4 border-ifood-dark flex items-center justify-center text-[10px] text-white/50"></div>
                 <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
                     <div>
                         <span class="text-xs font-mono font-bold text-ifood-muted">10/06</span>
@@ -858,22 +888,9 @@
                 </div>
             </div>
 
-            <!-- Item 7 -->
-            <div class="relative">
-                <div class="absolute -left-[41px] top-1 w-6 h-6 rounded-full bg-white/30 border-4 border-ifood-dark"></div>
-                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
-                    <div>
-                        <span class="text-xs font-mono font-bold text-ifood-muted">11/06</span>
-                        <h4 class="text-xl font-bold font-display text-white">TDQ Especial: Playbook "Vai Começar!"</h4>
-                        <p class="text-sm text-ifood-muted max-w-2xl">Apresentação oficial do playbook de regras e todos os canais explicativos da eleição.</p>
-                    </div>
-                    <span class="self-start md:self-center bg-white/5 border border-white/10 px-3 py-1 rounded text-xs font-mono uppercase text-ifood-muted">Geral / Playbook</span>
-                </div>
-            </div>
-
             <!-- Item 8 -->
             <div class="relative">
-                <div class="absolute -left-[41px] top-1 w-6 h-6 rounded-full bg-white/30 border-4 border-ifood-dark"></div>
+                <div class="absolute -left-[41px] top-1 w-6 h-6 rounded-full bg-white/30 border-4 border-ifood-dark flex items-center justify-center text-[10px] text-white/50"></div>
                 <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
                     <div>
                         <span class="text-xs font-mono font-bold text-ifood-muted">11/06</span>
@@ -885,13 +902,26 @@
             </div>
 
             <!-- Item 9 -->
+            <div class="relative">
+                <div class="absolute -left-[41px] top-1 w-6 h-6 rounded-full bg-white/30 border-4 border-ifood-dark flex items-center justify-center text-[10px] text-white/50"></div>
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                    <div>
+                        <span class="text-xs font-mono font-bold text-ifood-muted">11/06</span>
+                        <h4 class="text-xl font-bold font-display text-white">TDQ Especial: Playbook "Vai Começar!"</h4>
+                        <p class="text-sm text-ifood-muted max-w-2xl">Apresentação oficial do playbook de regras com todas as atualizações e canais explicativos da eleição (atualmente em construção).</p>
+                    </div>
+                    <span class="self-start md:self-center bg-white/5 border border-white/10 px-3 py-1 rounded text-xs font-mono uppercase text-ifood-muted">Geral / Playbook</span>
+                </div>
+            </div>
+
+            <!-- Item 10 -->
             <div class="relative bg-gradient-to-r from-red-950/10 to-transparent p-4 rounded-r-xl border-l-2 border-ifood-red">
-                <div class="absolute -left-[41px] top-5 w-6 h-6 rounded-full bg-ifood-red border-4 border-ifood-dark"></div>
+                <div class="absolute -left-[41px] top-5 w-6 h-6 rounded-full bg-ifood-red border-4 border-ifood-dark flex items-center justify-center text-[10px] text-white/50"></div>
                 <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
                     <div>
                         <span class="text-xs font-mono font-bold text-ifood-red">15/06</span>
                         <h4 class="text-xl font-bold font-display text-white">Abertura Oficial via WhatsApp Alli Broadcast</h4>
-                        <p class="text-sm text-white/80 max-w-2xl">Eleição oficialmente iniciada! Disparo massivo de engajamento e link direto de votação utilizando o WhatsApp da assistente virtual **Alli**.</p>
+                        <p class="text-sm text-white/80 max-w-2xl">Eleição oficialmente iniciada! Disparo massivo de engajamento e link direto utilizando o WhatsApp da assistente virtual **Alli**.</p>
                     </div>
                     <span class="self-start md:self-center bg-white/5 border border-white/10 px-3 py-1 rounded text-xs font-mono uppercase text-ifood-red">Abertura / Connect</span>
                 </div>
@@ -1070,7 +1100,7 @@
                     <div>
                         <h4 class="font-bold text-white mb-2 flex items-center gap-2"><i class="fa-solid fa-sliders text-emerald-400"></i> Como Funciona</h4>
                         <ul class="space-y-2 text-xs">
-                            <li><strong>Modelo:</strong> Por adesão individual (não obrigatório).</li>
+                            <li><strong>Modelo:</strong> Por adesão individual (not obrigatório).</li>
                             <li><strong>Praticidade:</strong> 100% digital via WhatsApp de forma simplificada e sem burocracias.</li>
                             <li><strong>Tipos de Plano:</strong> Escolha livre entre <strong>VGBL</strong> ou <strong>PGBL</strong>.</li>
                             <li><strong>Contribuição Mínima:</strong> Apenas R$ 1,00.</li>
@@ -1083,7 +1113,7 @@
                     <div>
                         <h4 class="font-bold text-white mb-2 flex items-center gap-2"><i class="fa-solid fa-gift text-emerald-400"></i> Benefícios & Cashback Stay</h4>
                         <ul class="space-y-2 text-xs">
-                            <li><strong>10% de Cashback</strong> na primeira aplicação para todos os Foodlovers.</li>
+                            <li><strong>10% de Cashback</strong> na primeira aplicação para todos os Foodlovers que realizarem o simulador de sonhos.</li>
                             <li><strong>+5% de Cashback</strong> ao indicar novos Foodlovers (calculado sobre o aporte do mês vigente da indicação, limitado a até 4 indicações por mês).</li>
                             <li><strong>Regra de Indicação:</strong> O indicado deve abrir a conta e aplicar no mínimo R$ 100,00.</li>
                             <li><strong>Limitação:</strong> Cashback limitado a aplicações mensais de até R$ 3.000,00.</li>
@@ -1143,7 +1173,10 @@
     <!-- MODAL INFORMATIVO: PET TELEMEDICINA -->
     <div id="modal-pet-telemed" class="fixed inset-0 z-50 hidden bg-ifood-dark/95 backdrop-blur-md flex items-center justify-center p-4">
         <div class="glass-card rounded-2xl w-full max-w-3xl p-8 max-h-[90vh] overflow-y-auto relative">
-            <div class="flex justify-between items-start mb-6">
+            <div class="absolute inset-x-0 top-0 bg-amber-500/20 border-b border-amber-500/30 py-2.5 text-center shadow-md">
+                <span class="text-xs font-black tracking-widest text-amber-400 uppercase font-mono"><i class="fa-solid fa-circle-info mr-1.5"></i> EM AVALIAÇÃO <i class="fa-solid fa-circle-info ml-1.5"></i></span>
+            </div>
+            <div class="flex justify-between items-start mb-6 pt-8">
                 <div class="flex items-center gap-3">
                     <div class="w-10 h-10 rounded-lg bg-cyan-500/10 flex items-center justify-center text-cyan-400">
                         <i class="fa-solid fa-paw"></i>
@@ -1162,7 +1195,7 @@
                 <!-- Vantagem Central -->
                 <div class="bg-cyan-950/20 p-5 rounded-xl border border-cyan-500/20 text-xs">
                     <h4 class="font-bold text-cyan-400 text-sm mb-2">Acesso Universal do Foodlover</h4>
-                    <p class="leading-relaxed">Consultas veterinárias <strong>online e gratuitas para todos os cães e gatos</strong> de todos os colaboradores iFood. O benefício é estendido de forma <strong>gratuita e ilimitada</strong> mesmo para quem não contratou plano de saúde Pet padrão no beneflex.</p>
+                    <p class="leading-relaxed">Consultas veterinárias <strong>online e gratuitas para todos os cães e gatos</strong> de todos os Foodlovers. O benefício é estendido de forma <strong>gratuita e ilimitada</strong> mesmo para quem não contratou plano de saúde Pet padrão no beneflex.</p>
                 </div>
 
                 <!-- Onboarding & Suporte Segment -->
@@ -1176,7 +1209,7 @@
                             <h5 class="font-bold text-white mb-1 flex items-center gap-1.5">
                                 <span class="w-2 h-2 rounded-full bg-cyan-400"></span> Início do Processo
                             </h5>
-                            <p class="text-xs text-ifood-muted">O onboarding ocorre sempre no <strong>1º dia útil do mês subsequente</strong> ao envio da base de dados oficiais pela equipa de Pessoas do iFood.</p>
+                            <p class="text-xs text-ifood-muted">O onboarding ocorre sempre no <strong>1º dia útil do mês subsequente</strong> ao envio da base de dados oficiais pela equipe de Pessoas do iFood.</p>
                         </div>
 
                         <div class="bg-white/5 p-4 rounded-xl border border-white/5">
@@ -1239,6 +1272,35 @@
         </div>
     </div>
 
+    <!-- MODAL INFORMATIVO: NOVO DECOLAR -->
+    <div id="modal-decolar" class="fixed inset-0 z-50 hidden bg-ifood-dark/95 backdrop-blur-md flex items-center justify-center p-4">
+        <div class="glass-card rounded-2xl w-full max-w-2xl p-8 max-h-[90vh] overflow-y-auto relative border border-blue-500/20">
+            <div class="flex justify-between items-start mb-6">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-400">
+                        <i class="fa-solid fa-plane-departure text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold font-display">Novo Decolar</h3>
+                </div>
+                <button onclick="closeModal('modal-decolar')" class="text-white/60 hover:text-white transition-colors">
+                    <i class="fa-solid fa-xmark text-xl"></i>
+                </button>
+            </div>
+            <div class="space-y-4 text-sm text-white/80 leading-relaxed">
+                <p>O <strong>Novo Decolar</strong> é uma iniciativa voltada para integrar as vantagens de viagens, hotéis e lazer diretamente à nossa plataforma de benefícios, com soluções facilitadas fora da folha.</p>
+                
+                <div class="bg-amber-500/10 border border-amber-500/30 p-5 rounded-xl text-xs space-y-3">
+                    <div class="flex items-start gap-3">
+                        <i class="fa-solid fa-triangle-exclamation text-amber-400 mt-1 text-base"></i>
+                        <p class="text-xs text-white/90">
+                            <strong>Nota Estratégica:</strong> O cenário para a integração operacional desta plataforma no nosso ecossistema do Foodlover está <strong class="text-amber-400 underline">em avaliação</strong>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- MODAL INFORMATIVO: AGENTE BENÍCIO -->
     <div id="modal-benicio" class="fixed inset-0 z-50 hidden bg-ifood-dark/95 backdrop-blur-md flex items-center justify-center p-4">
         <div class="glass-card rounded-2xl w-full max-w-2xl p-8 max-h-[90vh] overflow-y-auto relative">
@@ -1267,6 +1329,11 @@
         </div>
     </div>
 
+    <!-- RODAPÉ DA PÁGINA -->
+    <footer class="bg-ifood-dark border-t border-white/5 py-8 px-6 text-center text-xs text-ifood-muted">
+        <p>© 2026 iFood S/A. Material interno exclusivo para stakeholders e diretoria corporativa. Proibida distribuição.</p>
+    </footer>
+
     <!-- SCRIPTS DE INTERATIVIDADE -->
     <script>
         // Gestão de Modais
@@ -1288,7 +1355,7 @@
 
         // Fechar modais ao clicar na área exterior do conteúdo
         window.addEventListener('click', function(e) {
-            const modals = ['modal-avus', 'modal-stay', 'modal-pet-telemed', 'modal-pet-credito', 'modal-benicio'];
+            const modals = ['modal-avus', 'modal-stay', 'modal-pet-telemed', 'modal-pet-credito', 'modal-decolar', 'modal-benicio'];
             modals.forEach(id => {
                 const modal = document.getElementById(id);
                 if (e.target === modal) {
